@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - dan-the-meme-man
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - dan-the-meme-man/tex-table
+  - dan-the-meme-man/nllb-finetune
+  - dan-the-meme-man/wikipedia-downloader
+  - dan-the-meme-man/Markov
