@@ -9,7 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>37th and O Sts NW</p>
+    <p>Poulton Hall 240</p>
+    <p>1421 37th Street NW</p>
     <p>Washington, DC 20057</p>
 
 news: true # includes a list of news items
