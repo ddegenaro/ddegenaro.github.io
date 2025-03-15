@@ -6,5 +6,5 @@ repo_description_lines_max: 2
 github_repos:
   - dan-the-meme-man/tex-table
   - dan-the-meme-man/nllb-finetune
-  - dan-the-meme-man/wikipedia-downloader
-  - dan-the-meme-man/Markov
+  - dan-the-meme-man/entropy-learnability
+  - dan-the-meme-man/whisper-ui
