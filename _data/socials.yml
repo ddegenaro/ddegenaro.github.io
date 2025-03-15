@@ -23,16 +23,16 @@ github_username: dan-the-meme-man # your GitHub user name
 linkedin_username: daniel-degenaro # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
-# orcid_id: # your ORCID ID
+orcid_id: 0009-0005-1850-1801 # your ORCID ID
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-# research_gate_profile: # your profile on ResearchGate
+research_gate_profile: Dan-Degenaro # your profile on ResearchGate
 rss_icon: false # set to true to show the RSS icon
 scholar_userid: bU6sD_0AAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
-# semanticscholar_id: # your Semantic Scholar ID
+semanticscholar_id: 2308476598 # your Semantic Scholar ID
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
 # telegram_username: # your Telegram user name
