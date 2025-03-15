@@ -4,3 +4,16 @@
 "yang":
   - firstname: ["Eugene", "E."]
     url: https://www.eugene.zone/
+
+"sanders":
+  - "firstname": ["Kate", "K."]
+    url: https://katesanders9.github.io/
+
+"martin":
+  - "firstname": ["Alexander", "A."]
+    url: https://alexmartin1722.github.io/
+
+"murray":
+  - "firstname": ["Kenton", "K."]
+    url: https://kentonmurray.com/index.html
+

@@ -315,7 +315,7 @@ scholar:
   last_name: [DeGenaro]
   first_name: [Dan, D.]
 
-  style: ieee # TODO: check if this works
+  style: ieee
   locale: en
 
   source: /_bibliography/

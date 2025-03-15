@@ -37,7 +37,7 @@
       "name": "Georgetown University",
       "position": "Graduate Teaching Fellow",
       "startDate": "2023-08-24",
-      "endDate": "2025-05-10",
+      "endDate": "",
       "summary": "Teaching assistant for the following courses: Introduction to Data Analytics (graduate), Computer Vision (graduate), Deep Learning (graduate), and Deep Learning (undergraduate).",
       "highlights": ["Nominated for the Graduate Student Teaching Award for 2024."]
     },
@@ -84,7 +84,7 @@
       "url": "https://cs.georgetown.edu/",
       "area": "Computater Science",
       "studyType": "PhD",
-      "startDate": "2025-09",
+      "startDate": "",
       "endDate": "",
       "courses": ["TBD"]
     },
@@ -94,8 +94,8 @@
       "url": "https://linguistics.georgetown.edu/",
       "area": "Computational Linguistics",
       "studyType": "MS",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2023-08-23",
+      "endDate": "2025-05-10",
       "courses": ["Deep Learning", "Corpus Linguistics", "Multilingual NLP", "Machine Learning", "NLP", "Databases", "Hypothesis Testing and R", "Historical Linguistics"]
     },
     {
@@ -143,19 +143,19 @@
     },
     {
       "title": "Chancellor's Award",
-      "date": "2019-2023",
+      "date": "2019 through 2023",
       "awarder": "University of Massachusetts Amherst",
       "summary": "Awarded for academic excellence."
     },
     {
       "title": "Thomas J. Watson Memorial Scholarship",
-      "date": "2019-2023",
+      "date": "2019 through 2023",
       "awarder": "IBM Thomas J. Watson Foundation",
       "summary": "Awarded for academic excellence."
     },
     {
       "title": "Dean's List",
-      "date": "2019-2023",
+      "date": "2019 through 2023",
       "awarder": "University of Massachusetts Amherst",
       "summary": "Awarded for academic excellence."
     }
