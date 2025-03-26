@@ -6,7 +6,7 @@
     "email": "drd92@georgetown.edu",
     "phone": "",
     "url": "https://dan-the-meme-man.github.io/",
-    "summary": "I am an incoming PhD student at Georgetown studying computater science. I am currently finishing my MS in Computational Linguistics at Georgetown.",
+    "summary": "I'm an incoming PhD student at Georgetown studying computer science. I'm currently finishing my MS in computational linguistics, also at Georgetown.",
     "location": {
       "address": "37th and O Sts NW",
       "postalCode": "DC 20057",
@@ -29,6 +29,21 @@
         "network": "Google Scholar",
         "username": "Daniel DeGenaro",
         "url": "https://scholar.google.com/citations?user=bU6sD_0AAAAJ"
+      },
+      {
+        "network": "Semantic Scholar",
+        "username": "2308476598",
+        "url": "https://www.semanticscholar.org/author/Dan-DeGenaro/2308476598"
+      },
+      {
+        "network": "ORCiD",
+        "username": "0009-0005-1850-1801",
+        "url": "https://orcid.org/0009-0005-1850-1801"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Dan-Degenaro",
+        "url": "https://www.researchgate.net/profile/Dan-Degenaro"
       }
     ]
   },
@@ -47,7 +62,7 @@
       "startDate": "2024-06-03",
       "endDate": "2024-08-09",
       "summary": "Participated in the Human Language Technology Center of Excellence SCALE 2024 workshop.",
-      "highlights": ["eveloped a novel technique using downstream retrieval systems to produce preference rankings. Fine-tuned LLM using reinforcement learning to produce more retrievable document summaries."]
+      "highlights": ["Developed a novel technique using downstream retrieval systems to produce preference rankings. Fine-tuned LLM using reinforcement learning to produce more retrievable document summaries."]
     },
     {
       "name": "MIT",
@@ -62,7 +77,7 @@
       "position": "Undergraduate Researcher",
       "startDate": "2022-05-29",
       "endDate": "2022-08-06",
-      "summary": "eveloped a novel technique for the distillation of a multilingual BERT model into a smaller model."
+      "summary": "Developed a novel technique for the distillation of a multilingual BERT model into a smaller model."
     }
   ],
   "volunteer": [
@@ -82,9 +97,9 @@
       "institution": "Georgetown University",
       "location": "Washington, DC",
       "url": "https://cs.georgetown.edu/",
-      "area": "Computater Science",
+      "area": "Computer Science",
       "studyType": "PhD",
-      "startDate": "",
+      "startDate": "2025",
       "endDate": "",
       "courses": ["TBD"]
     },
@@ -219,7 +234,22 @@
       "name": "Windows"
     },
     {
-      "name": "Slurm"
+      "name": "Slurm/SGE"
+    },
+    {
+      "name": "LaTeX"
+    },
+    {
+      "name": "Machine Learning"
+    },
+    {
+      "name": "Deep Learning"
+    },
+    {
+      "name": "NLP"
+    },
+    {
+      "name": "Computer Vision"
     }
   ],
   "languages": [
@@ -256,6 +286,7 @@
         "Information Theory",
         "Language Modeling",
         "LLMs",
+        "Tokenization",
         "Machine Translation",
         "Low-Resource Languages",
         "Multilingual NLP",
@@ -263,7 +294,8 @@
         "Computational Linguistics",
         "Corpus Linguistics",
         "Historical Linguistics",
-        "Sociolinguistics"
+        "Sociolinguistics",
+        "Automatic Speech Recognition"
       ]
     },
     {
@@ -279,7 +311,8 @@
         "Diffusion Models",
         "Immunization",
         "AI Safety",
-        "AI Ethics"
+        "AI Ethics",
+        "Reinforcement Learning"
       ]
     }
   ]
