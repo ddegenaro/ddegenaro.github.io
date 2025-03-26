@@ -1,6 +1,12 @@
-# Whisper UI 1.2.16
-
-A simple GUI to transcribe audio using OpenAI's Whisper models.
+---
+layout: page
+title: Whisper-UI
+description: A simple GUI to transcribe audio using OpenAI's Whisper models.
+img: assets/img/12.jpg
+importance: 1
+category: fun
+related_publications: true
+---
 
 ## Installation
 

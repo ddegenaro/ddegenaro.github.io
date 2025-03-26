@@ -2,7 +2,7 @@
 layout: post
 title: Creating a distribution with a specific entropy using PyTorch
 date: 2025-03-26 00:05:00-0400
-description: Using an optimizer to play with the statistical properties of a distribution
+description: Using an optimizer to play with the statistical properties of a distribution.
 tags: information-theory, pytorch
 categories: work
 giscus_comments: true
