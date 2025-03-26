@@ -1,4 +1,12 @@
-# Entropy and learnability
+---
+layout: page
+title: Entropy and learnability
+description: How does the entropy of a distribution relate to a language model's ability to learn from that distribution?
+img: assets/img/12.jpg
+importance: 1
+category: work
+related_publications: true
+---
 
 ## Introduction
 
