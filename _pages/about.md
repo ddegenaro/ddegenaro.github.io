@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm an incoming PhD student at Georgetown University, where I will be working with [Dr. Sarah Bargal](https://gufaculty360.georgetown.edu/s/contact/0031Q00002cJxDQQA0/sarah-bargal) on multimodal intelligent systems -- those that integrate text, vision, and other forms of data such as audio.
+I'm an incoming PhD student at Georgetown University, where I will be working with [Dr. Sarah Bargal](https://gufaculty360.georgetown.edu/s/contact/0031Q00002cJxDQQA0/sarah-bargal) on multimodal intelligent systems -- those that integrate text, vision, and other forms of data such as audio. I'm also affiliated with the [PICoL Lab](https://github.com/picol-georgetown/wiki) led by [Dr. Ethan Wilcox](https://wilcoxeg.github.io/).
 
-I am interested in the development of safe, ethical, and energy-efficient models that serve the needs of everyday people while respecting privacy, copyright, and the right to be forgotten.
+I am interested in the development of safe, ethical, and energy-efficient multimodal intelligent systems that serve the needs of everyday people while respecting important rights such as privacy, copyright, and the right to be forgotten.
 
 I am also interested in low-resource machine translation and speech recognition, multilingual NLP, and information-theoretic approaches to language modeling and linguistics.
