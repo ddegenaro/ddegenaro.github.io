@@ -1,3 +1,8 @@
 "NAACL":
-  url: https://naacl.org/
-  color: "#00369f"
+  url: "https://naacl.org"
+  color: "#f71d25"
+
+"SIGIR":
+  url: "https://sigir.org"
+  color: "#6ba5d0"
+
