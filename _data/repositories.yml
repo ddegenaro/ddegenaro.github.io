@@ -1,10 +1,10 @@
 github_users:
-  - dan-the-meme-man
+  - ddegenaro
 
 repo_description_lines_max: 2
 
 github_repos:
-  - dan-the-meme-man/tex-table
-  - dan-the-meme-man/nllb-finetune
-  - dan-the-meme-man/entropy-learnability
-  - dan-the-meme-man/whisper-ui
+  - ddegenaro/tex-table
+  - ddegenaro/nllb-finetune
+  - ddegenaro/entropy-learnability
+  - ddegenaro/whisper-ui

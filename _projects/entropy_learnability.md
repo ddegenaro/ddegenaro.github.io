@@ -34,4 +34,4 @@ $$H(p, q) = H(p, p) = H(X)$$
 
 ## Some experiments
 
-Take a look at some plots I made [here](https://dan-the-meme-man.github.io/entropy-learnability/).
+Take a look at some plots I made [here](https://ddegenaro.github.io/entropy-learnability/).
