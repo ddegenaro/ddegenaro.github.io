@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://dan-the-meme-man.github.io/sitemap.xml
+Sitemap: https://ddegenaro.github.io/sitemap.xml
