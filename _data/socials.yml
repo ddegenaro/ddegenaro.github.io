@@ -2,6 +2,7 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
+# acl_id: dan-degenaro # TODO
 # acm_id: # your dl.acm.org/profile/id
 arxiv_search_results: DeGenaro,+D
 # blogger_url: # your blogger URL
@@ -13,6 +14,7 @@ email: drd92@georgetown.edu # your email address
 # flickr_id: # your flickr id
 github_username: ddegenaro # your GitHub user name
 # gitlab_username: # your GitLab user name
+# hf_id: ddegenaro # TODO
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # instagram_id: # your instagram id
@@ -24,6 +26,7 @@ github_username: ddegenaro # your GitHub user name
 linkedin_username: daniel-degenaro # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
+# openreview: Dan_DeGenaro1 # TODO
 orcid_id: 0009-0005-1850-1801 # your ORCID ID
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
