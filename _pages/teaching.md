@@ -10,3 +10,7 @@ nav_order: 6
 ## Lecture given at Walter Payton Prep High School in Chicago, IL via Zoom
 
 [Lecture/Jupyter notebook on n-grams](assets/jupyter/n_grams.ipynb)
+
+## Workshop on LaTeX
+
+[Slides](assets/pdf/LaTeX_Workshop.pdf)
