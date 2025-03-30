@@ -31,8 +31,8 @@ nav_order: 6
 
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
-[Getting started](https://ddegenaro.github.io/teaching/notebooks/get_started.ipynb)
-[Training a CNN](https://ddegenaro.github.io/teaching/notebooks/MNIST_CNN.ipynb)
+- [Getting started](https://ddegenaro.github.io/teaching/notebooks/get_started.ipynb)
+- [Training a CNN](https://ddegenaro.github.io/teaching/notebooks/MNIST_CNN.ipynb)
 
 ### Lecture given at Walter Payton Prep High School in Chicago, IL via Zoom
 
