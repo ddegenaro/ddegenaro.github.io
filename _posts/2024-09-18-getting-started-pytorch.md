@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with PyTorch in Google Colab
-date: 2024-09-18 12:00:00-0500
+date: 2024-09-18 12:00:00
 description: A brief introduction to using PyTorch in Colab. This notebook is adapted from some guest lectures I gave for courses for which I served as a TA.
 tags: teaching pytorch
 categories: work

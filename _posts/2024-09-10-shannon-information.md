@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shannon information
-date: 2024-09-10 12:00:00-0500
+date: 2024-09-10 12:00:00
 description: A brief introduction to Shannon information and its applications to language and language modelings. I put this notebook together as my contribution to a seminar in which every student was required to present on a technical topic.
 tags: information-theory language-modeling
 categories: work

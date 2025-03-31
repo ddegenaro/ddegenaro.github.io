@@ -1,11 +1,7 @@
 {% for social in site.data.socials %}
   {% case social[0] %}
-    {% when 'acl_id' %}
-      <a href="https://aclanthology.org/people/d/{{ social[1] }}/" title="ACL User Page"><i class="ai ai-acl"></i></a>
     {% when 'acm_id' %}
       <a href="https://dl.acm.org/profile/{{ social[1] }}/" title="ACM DL"><i class="ai ai-acm"></i></a>
-    {% when 'arxiv_search_results' %}
-      <a href="https://arxiv.org/search/cs?searchtype=author&query={{ social[1] }}" title="arXiv"><i class="ai ai-arxiv"></i></a>
     {% when 'blogger_url' %}
       <a href="{{ social[1] }}" title="Blogger"><i class="fa-brands fa-blogger-b"></i></a>
     {% when 'bluesky_url' %}
@@ -24,8 +20,6 @@
       <a href="https://github.com/{{ social[1] }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
     {% when 'gitlab_username' %}
       <a href="https://gitlab.com/{{ social[1] }}" title="GitLab"><i class="fa-brands fa-gitlab"></i></a>
-    {% when 'hf_id' %}
-    <a href="https://huggingface.co/{{ social[1] }}" title="HuggingFace"><i class="ai ai-ieee"></i></a>
     {% when 'ieee_id' %}
       <a href="https://ieeexplore.ieee.org/author/{{ social[1] }}/" title="IEEE Xplore"><i class="ai ai-ieee"></i></a>
     {% when 'inspirehep_id' %}
@@ -48,8 +42,6 @@
       <a rel="me" href="https://{{ social[1] }}" title="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
     {% when 'medium_username' %}
       <a href="https://medium.com/@{{ social[1] }}" title="Medium"><i class="fa-brands fa-medium"></i></a>
-    {% when 'openreview' %}
-      <a href="https://openreview.net/profile?id=~{{ social[1] }}" title="OpenReview"><i class="ai ai-openreview"></i></a>
     {% when 'orcid_id' %}
       <a href="https://orcid.org/{{ social[1] }}" title="ORCID"><i class="ai ai-orcid"></i></a>
     {% when 'osf_id' %}
