@@ -197,9 +197,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
-  tags:
-    output: true
-    permalink: /:tag/:name/
+  # tags:
+  #   output: true
+  #   permalink: /:tag/:name/
 
 announcements:
   enabled: true
