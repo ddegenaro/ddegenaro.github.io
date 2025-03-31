@@ -11,6 +11,7 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
 assets/tex/*.gz
 assets/tex/*.out
 assets/tex/*.log
