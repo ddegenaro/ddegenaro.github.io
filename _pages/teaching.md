@@ -31,19 +31,19 @@ nav_order: 6
 
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
-- [Getting started]({% post_url 2024-09-18-getting-started-pytorch.md %})
-- [Training a CNN]({% post_url 2024-09-18-mnist-cnn.md %})
+- [Getting started]({% post_url 2024-09-18-getting-started-pytorch %})
+- [Training a CNN]({% post_url 2024-09-18-mnist-cnn %})
 
 ### Lecture given at Walter Payton Prep High School in Chicago, IL via Zoom
 
-[Lecture/Jupyter notebook on n-grams]({% post_url 2025-03-21-n-grams.md %})
+[Lecture/Jupyter notebook on n-grams]({% post_url 2025-03-21-n-grams %})
 
 ### Workshop on LaTeX
 
-[Slides]({% post_url 2024-09-20-latex-workshop.md %})
+[Slides]({% post_url 2024-09-20-latex-workshop %})
 
 ### Brief lesson on Shannon information
 
 This was my contribution to a seminar course in which every student was required to present on a technical topic.
 
-[Notebook on Shannon information]({% post_url 2024-09-10-shannon-information.md %})
+[Notebook on Shannon information]({% post_url 2024-09-10-shannon-information %})
