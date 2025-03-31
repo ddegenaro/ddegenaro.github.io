@@ -31,19 +31,19 @@ nav_order: 6
 
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
-- [Getting started](https://ddegenaro.github.io/teaching/notebooks/get_started.ipynb)
-- [Training a CNN](https://ddegenaro.github.io/teaching/notebooks/MNIST_CNN.ipynb)
+- [Getting started]({% post_url 2024-09-18-getting-started-pytorch.md %})
+- [Training a CNN]({% post_url 2024-09-18-mnist-cnn.md %})
 
 ### Lecture given at Walter Payton Prep High School in Chicago, IL via Zoom
 
-[Lecture/Jupyter notebook on n-grams](https://ddegenaro.github.io/teaching/notebooks/n_grams.ipynb)
+[Lecture/Jupyter notebook on n-grams]({% post_url 2025-03-21-n-grams.md %})
 
 ### Workshop on LaTeX
 
-[Slides](https://ddegenaro.github.io/assets/pdf/LaTeX_Workshop.pdf)
+[Slides]({% post_url 2024-09-20-latex-workshop.md %})
 
 ### Brief lesson on Shannon information
 
 This was my contribution to a seminar course in which every student was required to present on a technical topic.
 
-[Notebook on Shannon information](https://ddegenaro.github.io/teaching/notebooks/shannon_information.ipynb)
+[Notebook on Shannon information]({% post_url 2024-09-10-shannon-information.md %})
