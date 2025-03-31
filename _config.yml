@@ -199,7 +199,7 @@ collections:
     permalink: /:collection/:title/
   tags:
     output: true
-    permalink: /tag/:name/
+    permalink: /:tag/:name/
 
 announcements:
   enabled: true
