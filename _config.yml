@@ -304,8 +304,9 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["information-theory", "pytorch"] # these tags will be displayed on the front page of your blog
-display_categories: ["work"] # these categories will be displayed on the front page of your blog
+# blog tags and categories
+display_tags: ["information-theory", "language-modeling", "pytorch", "teaching", "vision"]
+display_categories: ["work"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
