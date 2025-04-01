@@ -316,13 +316,13 @@ terser:
 
 jekyll-archives:
   posts:
-    enabled: [tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
   books:
-    enabled: [tags] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [] # enables year, tag and category archives (remove if you need to disable one of them).
 
 # blog tags and categories
 display_tags: ["information-theory", "language-modeling", "pytorch", "teaching", "vision"]
