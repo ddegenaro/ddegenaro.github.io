@@ -146,13 +146,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/whisper_ui/";
             },},{
-        id: 'social-arxiv_search_results',
-        title: 'Arxiv_search_results',
-        section: 'Socials',
-        handler: () => {
-          window.open("", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
