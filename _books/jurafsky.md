@@ -2,8 +2,8 @@
 layout: book-review
 title: Speech and Language Processing, 3rd Edition
 author: Dan Jurafsky and James H. Martin
-categories: nlp
-tags: top-100
+categories: work
+tags: nlp
 buy_link: https://web.stanford.edu/~jurafsky/slp3/?authuser=2
 ---
 

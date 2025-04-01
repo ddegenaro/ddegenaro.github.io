@@ -6,7 +6,7 @@
     "email": "drd92@georgetown.edu",
     "phone": "",
     "url": "https://ddegenaro.github.io/",
-    "summary": "I'm an incoming PhD student at Georgetown studying computer science. I'm currently finishing my MS in computational linguistics, also at Georgetown.",
+    "summary": "Incoming PhD student at Georgetown studying computer science with a focus on multimodal systems.",
     "location": {
       "address": "37th and O Sts NW",
       "postalCode": "DC 20057",
@@ -54,7 +54,8 @@
       "startDate": "2023-08-24",
       "endDate": "",
       "summary": "Teaching assistant for the following courses: Introduction to Data Analytics (graduate), Computer Vision (graduate), Deep Learning (graduate), and Deep Learning (undergraduate).",
-      "highlights": ["Nominated for the Graduate Student Teaching Award for 2024."]
+      "highlights": ["Nominated for the Graduate Student Teaching Award for 2024."],
+      "url": "https://cs.georgetown.edu/"
     },
     {
       "name": "Johns Hopkins University",
@@ -62,7 +63,8 @@
       "startDate": "2024-06-03",
       "endDate": "2024-08-09",
       "summary": "Participated in the Human Language Technology Center of Excellence SCALE 2024 workshop.",
-      "highlights": ["Developed a novel technique using downstream retrieval systems to produce preference rankings. Fine-tuned LLM using reinforcement learning to produce more retrievable document summaries."]
+      "highlights": ["Developed a novel technique using downstream retrieval systems to produce preference rankings. Fine-tuned LLM using reinforcement learning to produce more retrievable document summaries."],
+      "url": "https://hltcoe.jhu.edu/research/scale/scale-2024/"
     },
     {
       "name": "MIT",
@@ -70,14 +72,16 @@
       "startDate": "2024-05-20",
       "endDate": "2024-08-01",
       "summary": "Developed and taught a course in machine learning, data science, natural language processing, and computer vision.",
-      "highlights": ["Received rave reviews from students and supervisors alike. Re-hired for summer 2025."]
+      "highlights": ["Received rave reviews from students and supervisors alike. Re-hired for summer 2025."],
+      "url": "https://mites.mit.edu/"
     },
     {
       "name": "University of Colorado, Colorado Springs",
       "position": "Undergraduate Researcher",
       "startDate": "2022-05-29",
       "endDate": "2022-08-06",
-      "summary": "Developed a novel technique for the distillation of a multilingual BERT model into a smaller model."
+      "summary": "Developed a novel technique for the distillation of a multilingual BERT model into a smaller model.",
+      "url": "https://faculty.uccs.edu/jkalita/reu-site-advances-in-natural-language-processing/"
     }
   ],
   "volunteer": [
@@ -126,7 +130,7 @@
     {
       "institution": "University of Massachusetts Amherst",
       "location": "Amherst, MA",
-      "url": "https://www.umass.edu/linguistics/",
+      "url": "https://www.umass.edu/physics/",
       "area": "Physics",
       "studyType": "BS",
       "startDate": "2019-09-03",
@@ -136,7 +140,7 @@
     {
       "institution": "University of Massachusetts Amherst",
       "location": "Amherst, MA",
-      "url": "https://www.umass.edu/linguistics/",
+      "url": "https://www.umass.edu/mathematics-statistics/",
       "area": "Applied Mathematics",
       "studyType": "BS",
       "startDate": "2019-09-03",
@@ -148,19 +152,22 @@
     {
       "title": "Summa Cum Laude",
       "date": "2023",
-      "awarder": "University of Massachusetts Amherst"
+      "awarder": "University of Massachusetts Amherst",
+      "url": "https://www.umass.edu/registrar/latin-honors-information"
     },
     {
       "title": "LeRoy F. Cook, Jr. Memorial Scholarship",
       "date": "2022",
       "awarder": "Department of Physics, University of Massachusetts Amherst",
-      "summary": "Awarded for academic excellence in physics and for engaging in teaching/tutoring as an undergraduate."
+      "summary": "Awarded for academic excellence in physics and for engaging in teaching/tutoring as an undergraduate.",
+      "url": "https://www.umass.edu/physics/undergraduate/opportunities"
     },
     {
       "title": "Chancellor's Award",
       "date": "2019 through 2023",
       "awarder": "University of Massachusetts Amherst",
-      "summary": "Awarded for academic excellence."
+      "summary": "Awarded for academic excellence.",
+      "url": "https://www.umass.edu/financialaid/undergraduate/undergraduate-scholarships/umass-admissions-scholarships-and-awards"
     },
     {
       "title": "Thomas J. Watson Memorial Scholarship",
@@ -172,7 +179,8 @@
       "title": "Dean's List",
       "date": "2019 through 2023",
       "awarder": "University of Massachusetts Amherst",
-      "summary": "Awarded for academic excellence."
+      "summary": "Awarded for academic excellence.",
+      "url": "https://www.umass.edu/registrar/deans-list-honors"
     }
   ],
   "publications": [
