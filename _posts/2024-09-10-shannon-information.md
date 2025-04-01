@@ -9,6 +9,8 @@ giscus_comments: false
 related_posts: true
 ---
 
+[Download this Jupyter notebook]({{ "/assets/jupyter/shannon_information.ipynb" | relative_url }})
+
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/shannon_information.ipynb" | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/shannon_information.ipynb %}{% endcapture %}

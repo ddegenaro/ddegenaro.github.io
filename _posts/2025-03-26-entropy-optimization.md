@@ -9,6 +9,8 @@ giscus_comments: false
 related_posts: true
 ---
 
+[Download this Jupyter notebook]({{ "/assets/jupyter/entropy_opt.ipynb" | relative_url }})
+
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/entropy_opt.ipynb" | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/entropy_opt.ipynb %}{% endcapture %}
