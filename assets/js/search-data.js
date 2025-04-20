@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-creating-a-distribution-with-a-specific-entropy-using-pytorch",
+        },{id: "post-principal-component-analysis-of-bert-39-s-static-embeddings",
+        
+          title: "Principal component analysis of BERT&#39;s static embeddings",
+        
+        description: "Principal component analysis (PCA) is a simple algorithm that compresses high-dimensional vectors into a low-dimensional space. It does this by creating an orthogonal basis in the low-dimensional space using the directions along which the data has maximum variance in the original high-dimensional space.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/bert-pca/";
+          
+        },
+      },{id: "post-creating-a-distribution-with-a-specific-entropy-using-pytorch",
         
           title: "Creating a distribution with a specific entropy using PyTorch",
         
