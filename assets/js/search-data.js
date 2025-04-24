@@ -141,7 +141,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "projects-entropy-and-learnability",
+            },},{id: "news-won-georgetown-university-s-graduate-student-teaching-assistant-award",
+          title: 'Won Georgetown University’s Graduate Student Teaching Assistant Award!',
+          description: "",
+          section: "News",},{id: "projects-entropy-and-learnability",
           title: 'Entropy and learnability',
           description: "How does the entropy of a distribution relate to a language model&#39;s ability to learn from that distribution?",
           section: "Projects",handler: () => {
