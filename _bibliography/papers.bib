@@ -1,28 +1,43 @@
 @inproceedings{degenaro-lupicki-2024-experiments,
-    title = "Experiments in Mamba Sequence Modeling and {NLLB}-200 Fine-Tuning for Low Resource Multilingual Machine Translation",
-    author = "DeGenaro, Dan  and
-      Lupicki, Tom",
-    editor = "Mager, Manuel  and
+    title = {Experiments in Mamba Sequence Modeling and {NLLB}-200 Fine-Tuning for Low Resource Multilingual Machine Translation},
+    author = {DeGenaro, Dan  and
+      Lupicki, Tom},
+    editor = {Mager, Manuel  and
       Ebrahimi, Abteen  and
       Rijhwani, Shruti  and
       Oncevay, Arturo  and
       Chiruzzo, Luis  and
       Pugh, Robert  and
-      von der Wense, Katharina",
-    booktitle = "Proceedings of the 4th Workshop on Natural Language Processing for Indigenous Languages of the Americas (AmericasNLP 2024)",
+      von der Wense, Katharina},
+    booktitle = {Proceedings of the 4th Workshop on Natural Language Processing for Indigenous Languages of the Americas (AmericasNLP 2024)},
     month = jun,
-    year = "2024",
-    address = "Mexico City, Mexico",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.americasnlp-1.22/",
-    doi = "10.18653/v1/2024.americasnlp-1.22",
-    pages = "188--194",
+    year = {2024},
+    address = {Mexico City, Mexico},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2024.americasnlp-1.22/},
+    doi = {10.18653/v1/2024.americasnlp-1.22},
+    pages = {188--194},
     pdf = {https://aclanthology.org/2024.americasnlp-1.22.pdf},
     google_scholar_id = {u-x6o8ySG0sC},
-    doi = {10.18653/v1/2024.americasnlp-1.22},
-    url = {https://aclanthology.org/2024.americasnlp-1.22/},
     selected = {true},
     bibtex_show = {true},
     abbr = {NAACL},
-    abstract = "This paper presents DC{\_}DMV`s submission to the AmericasNLP 2024 Shared Task 1: Machine Translation Systems for Indigenous Languages. Our submission consists of two multilingual approaches to building machine translation systems from Spanish to eleven Indigenous languages: fine-tuning the 600M distilled variant of NLLB-200, and an experiment in training from scratch a neural network using the Mamba State Space Modeling architecture. We achieve the best results on the test set for a total of 4 of the language pairs between two checkpoints by fine-tuning NLLB-200, and outperform the baseline score on the test set for 2 languages."
+    abstract = {This paper presents DC{\_}DMV`s submission to the AmericasNLP 2024 Shared Task 1: Machine Translation Systems for Indigenous Languages. Our submission consists of two multilingual approaches to building machine translation systems from Spanish to eleven Indigenous languages: fine-tuning the 600M distilled variant of NLLB-200, and an experiment in training from scratch a neural network using the Mamba State Space Modeling architecture. We achieve the best results on the test set for a total of 4 of the language pairs between two checkpoints by fine-tuning NLLB-200, and outperform the baseline score on the test set for 2 languages.}
+}
+
+@misc{samuel2025mmmorrfmultimodalmultilingualmodularized,
+    title={MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion}, 
+    author={Saron Samuel and Dan DeGenaro and Jimena Guallar-Blasco and Kate Sanders and Oluwaseun Eisape and Arun Reddy and Alexander Martin and Andrew Yates and Eugene Yang and Cameron Carpenter and David Etter and Efsun Kayi and Matthew Wiesner and Kenton Murray and Reno Kriz},
+    year={2025},
+    eprint={2503.20698},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2503.20698},
+    doi = {https://doi.org/10.48550/arXiv.2503.20698},
+    pdf = {https://arxiv.org/pdf/2503.20698},
+    google_scholar_id = {d1gkVwhDpl0C},
+    selected = {true},
+    bibtex_show = {true},
+    abbr = {SIGIR},
+    abstract = {Videos inherently contain multiple modalities, including visual events, text overlays, sounds, and speech, all of which are important for retrieval. However, state-of-the-art multimodal language models like VAST and LanguageBind are built on vision-language models (VLMs), and thus overly prioritize visual signals. Retrieval benchmarks further reinforce this bias by focusing on visual queries and neglecting other modalities. We create a search system MMMORRF that extracts text and features from both visual and audio modalities and integrates them with a novel modality-aware weighted reciprocal rank fusion. MMMORRF is both effective and efficient, demonstrating practicality in searching videos based on users' information needs instead of visual descriptive queries. We evaluate MMMORRF on MultiVENT 2.0 and TVR, two multimodal benchmarks designed for more targeted information needs, and find that it improves nDCG@20 by 81% over leading multimodal encoders and 37% over single-modality retrieval, demonstrating the value of integrating diverse modalities.}
 }
