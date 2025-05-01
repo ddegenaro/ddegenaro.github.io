@@ -174,7 +174,7 @@
       "date": "2019 through 2023",
       "awarder": "University of Massachusetts Amherst",
       "summary": "Awarded for academic excellence.",
-      "url": "https://www.umass.edu/financialaid/undergraduate/undergraduate-scholarships/umass-admissions-scholarships-and-awards"
+      "url": "https://www.umass.edu/financialaid/undergraduate/undergraduate-scholarships/umass-admissions-scholarships-and-awards#for-our-non-massachusetts-applicants"
     },
     {
       "title": "Thomas J. Watson Memorial Scholarship",
@@ -197,6 +197,13 @@
       "releaseDate": "2024",
       "url": "https://aclanthology.org/2024.americasnlp-1.22/",
       "summary": "With a fellow student, I developed a state-of-the-art machine translation system for indigenous languages of the Americas, winning 2nd place in this shared task competition."
+    },
+    {
+      "name": "MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion",
+      "publisher": "To appear at SIGIR 2025 as a demo paper",
+      "releaseDate": "2025",
+      "url": "https://arxiv.org/abs/2503.20698",
+      "summary": "We found that a pipeline approach composed of modality-specialized systems out-performed advanced multimodal models on some video retrieval tasks."
     }
   ],
   "skills": [

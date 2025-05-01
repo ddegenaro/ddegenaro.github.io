@@ -6,8 +6,8 @@ inline: false
 related_posts: false
 ---
 
-With colleagues at JHU, ["MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion"](https://arxiv.org/abs/2503.20698), was accepted to SIGIR 2025 as a demo paper.
+Written with colleagues at other universities, ["MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion"](https://arxiv.org/abs/2503.20698), was accepted to SIGIR 2025 as a demo paper.
 
 ---
 
-This paper was submitted to Shared Task 1 in the [AmericasNLP 2024 Workshop](https://turing.iimas.unam.mx/americasnlp/2025_workshop.html), co-located with NAACL 2024. We found that a careful fine-tuning curriculum was quite helpful in improving the performance of a pre-trained MT model on low-resource languages. Our submission won second place in the shared task!
+This paper was developed based on work done at the [Johns Hopkins University's Human Language Technology Center of Excellence](https://hltcoe.jhu.edu/)'s [SCALE 2024 program](https://hltcoe.jhu.edu/research/scale/scale-2024/). We found that a pipeline approach composed of modality-specialized systems out-performed advanced multimodal models on some video retrieval tasks. Additionally, we found that fusing multiple modality-specific rankings derived from such components can be further improved by weighting rankings derived from visual features more heavily when text is expected to be scant based on the query.
