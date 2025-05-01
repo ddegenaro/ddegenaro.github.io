@@ -141,6 +141,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
+            },},{id: "news-workshop-paper-accepted-to-sigir",
+          title: 'Workshop paper accepted to SIGIR!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_3/";
             },},{id: "news-won-georgetown-university-s-graduate-student-teaching-assistant-award",
           title: 'Won Georgetown University’s Graduate Student Teaching Assistant Award!',
           description: "",
