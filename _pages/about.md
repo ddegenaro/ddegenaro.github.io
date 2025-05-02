@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD @ Georgetown Computer Science
+subtitle: Incoming PhD Student @ Georgetown Computer Science
 
 profile:
   align: right

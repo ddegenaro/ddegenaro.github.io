@@ -7,22 +7,22 @@ nav: true
 nav_order: 6
 ---
 
-## Courses
+## Courses Taught
 
-- Machine Learning (MIT MITES Semester Program 2024)
+- Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2024)
 
 ## Teaching Assistantships
 
 ### Georgetown University
 
-- COSC-3470 | Deep Learning, taught by Sarah Bargal (Spring 2025)
+- COSC-3470 | Deep Learning, taught by [Sarah Bargal](https://bargal.georgetown.domains/) (Spring 2025)
 - COSC-5455 | Deep Learning, taught by Sarah Bargal (Fall 2024)
 - COSC-5470 | Deep Learning for Computer Vision, taught by Sarah Bargal (Spring 2024)
-- COSC-5580 | Introduction to Data Analytics, taught by Lisa Singh (Fall 2023)
+- COSC-5580 | Introduction to Data Analytics, taught by [Lisa Singh](https://people.cs.georgetown.edu/~singh/) (Fall 2023)
 
 ### UMass Amherst
 
-- PHYS-281 | Computational Physics, taught by St&eacute;phane Willocq (Spring 2022)
+- PHYS-281 | Computational Physics, taught by [St&eacute;phane Willocq](https://websites.umass.edu/willocq/) (Spring 2022)
 - PHYS-131 | Introductory Physics, taught by Heath Hatch (Fall 2021)
 - PHYS-131 | Introductory Physics, taught by Heath Hatch (Spring 2021)
 - PHYS-131 | Introductory Physics, taught by Heath Hatch (Fall 2020)
