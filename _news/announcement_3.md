@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Workshop paper accepted to SIGIR!
+title: Workshop paper accepted to SIGIR 2025!
 date: 2025-04-04 12:00:00
 inline: false
 related_posts: false

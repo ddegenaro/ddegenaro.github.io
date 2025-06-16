@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Presented at NAACL 2024!
+title: Presented workshop paper at NAACL 2024!
 date: 2024-06-21 12:00:00
 inline: false
 related_posts: false

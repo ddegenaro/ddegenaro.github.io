@@ -1,0 +1,193 @@
+<div class="conferences">
+  {% assign conferences_data = site.data.confs %}
+  {% if conferences_data != blank %}
+    {% assign conferences_size = conferences_data | size %}
+    
+    <!-- Sort controls -->
+    <div class="sort-controls mb-3">
+      <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline')">Sort by Deadline</button>
+      <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title')">Sort by Name</button>
+    </div>
+    
+    <div
+      class="table-responsive"
+      {% if include.limit and page.conferences.scrollable and conferences_size > 5 %}
+        style="max-height: 70vh"
+      {% endif %}
+    >
+      <table class="table table-sm table-borderless" id="conferences-table">
+        <thead>
+          <tr>
+            <th scope="col" style="width: 15%">Conference</th>
+            <th scope="col" style="width: 15%">Abstract Deadline</th>
+            <th scope="col" style="width: 15%">Submission Deadline</th>
+            <th scope="col" style="width: 15%">Date & Location</th>
+            <th scope="col" style="width: 40%">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign conferences = conferences_data %}
+          {% if include.sort_by == 'deadline' %}
+            {% assign conferences = conferences_data | sort: 'deadline' %}
+          {% elsif include.sort_by == 'title' %}
+            {% assign conferences = conferences_data | sort: 'title' %}
+          {% endif %}
+          
+          {% if include.limit and page.conferences.limit %}
+            {% assign conferences_limit = page.conferences.limit %}
+          {% else %}
+            {% assign conferences_limit = conferences_size %}
+          {% endif %}
+          
+          {% for conf in conferences limit: conferences_limit %}
+            <tr data-deadline="{{ conf.deadline }}" data-title="{{ conf.title }}">
+              <td>
+                <strong>
+                  {% if conf.link %}
+                    <a href="{{ conf.link }}" target="_blank">{{ conf.title }} {{ conf.year }}</a>
+                  {% else %}
+                    {{ conf.title }} {{ conf.year }}
+                  {% endif %}
+                </strong>
+                <br>
+                <small class="text-muted">{{ conf.full_name }}</small>
+              </td>
+              <td>
+                {% if conf.abstract_deadline %}
+                  <span class="deadline-date" data-deadline="{{ conf.abstract_deadline }}">
+                    {{ conf.abstract_deadline | date: '%b %d, %Y' }}
+                  </span>
+                  <br>
+                  <small class="text-muted">{{ conf.abstract_deadline | date: '%H:%M' }} {{ conf.timezone }}</small>
+                {% else %}
+                  <span class="text-muted">N/A</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if conf.deadline %}
+                  <span class="deadline-date" data-deadline="{{ conf.deadline }}">
+                    {{ conf.deadline | date: '%b %d, %Y' }}
+                  </span>
+                  <br>
+                  <small class="text-muted">{{ conf.deadline | date: '%H:%M' }} {{ conf.timezone }}</small>
+                {% else %}
+                  <span class="text-muted">N/A</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if conf.date %}
+                  <strong>{{ conf.date }}</strong>
+                {% endif %}
+                {% if conf.place %}
+                  <br><small class="text-muted">📍 {{ conf.place }}</small>
+                {% endif %}
+              </td>
+              <td>
+                {% if conf.sub and conf.sub.size > 0 %}
+                  <div class="mb-2">
+                    {% for subject in conf.sub %}
+                      <span class="badge badge-secondary badge-sm">{{ subject }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                {% if conf.note %}
+                  <div class="conference-note">
+                    {{ conf.note }}
+                  </div>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p>No conferences found...</p>
+  {% endif %}
+</div>
+
+<script>
+function sortConferences(sortBy) {
+  const table = document.getElementById('conferences-table');
+  const tbody = table.getElementsByTagName('tbody')[0];
+  const rows = Array.from(tbody.getElementsByTagName('tr'));
+  
+  rows.sort((a, b) => {
+    let aValue, bValue;
+    
+    if (sortBy === 'deadline') {
+      aValue = new Date(a.dataset.deadline || '9999-12-31');
+      bValue = new Date(b.dataset.deadline || '9999-12-31');
+    } else if (sortBy === 'title') {
+      aValue = a.dataset.title.toLowerCase();
+      bValue = b.dataset.title.toLowerCase();
+      return aValue.localeCompare(bValue);
+    }
+    
+    return aValue - bValue;
+  });
+  
+  // Clear tbody and re-append sorted rows
+  tbody.innerHTML = '';
+  rows.forEach(row => tbody.appendChild(row));
+  
+  // Update button states
+  document.querySelectorAll('.sort-controls button').forEach(btn => {
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-outline-primary');
+  });
+  event.target.classList.remove('btn-outline-primary');
+  event.target.classList.add('btn-primary');
+}
+
+// Add deadline highlighting
+document.addEventListener('DOMContentLoaded', function() {
+  const deadlineDates = document.querySelectorAll('.deadline-date');
+  const now = new Date();
+  
+  deadlineDates.forEach(element => {
+    const deadlineDate = new Date(element.dataset.deadline);
+    const daysUntilDeadline = Math.ceil((deadlineDate - now) / (1000 * 60 * 60 * 24));
+    
+    if (daysUntilDeadline < 0) {
+      element.classList.add('text-muted');
+      element.style.textDecoration = 'line-through';
+    } else if (daysUntilDeadline <= 7) {
+      element.classList.add('text-danger');
+      element.style.fontWeight = 'bold';
+    } else if (daysUntilDeadline <= 30) {
+      element.classList.add('text-warning');
+      element.style.fontWeight = 'bold';
+    }
+  });
+});
+</script>
+
+<style>
+.conferences .badge {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.conferences .conference-note {
+  font-size: 0.9em;
+}
+
+.conferences .sort-controls {
+  text-align: right;
+}
+
+.conferences .deadline-date {
+  display: inline-block;
+}
+
+.conferences td {
+  vertical-align: top;
+  padding: 0.75rem 0.5rem;
+}
+
+.conferences th {
+  background-color: var(--bs-light, #f8f9fa);
+  font-weight: 600;
+}
+</style>

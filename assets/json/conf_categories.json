@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Machine Learning",
+      "sub": "ML",
+      "color": "#ffd300"
+    },
+    {
+      "name": "Computer Vision",
+      "sub": "CV",
+      "color": "#deff0a"
+    },
+    {
+      "name": "Natural Language Processing",
+      "sub": "NLP",
+      "color": "#147df5"
+    },
+    {
+      "name": "Computational Linguistics",
+      "sub": "CL",
+      "color": "#147df5"
+    },
+    {
+      "name": "Speech/SigProc",
+      "sub": "SP",
+      "color": "#580aff"
+    },
+    {
+      "name": "Knowledge Representation",
+      "sub": "KR",
+      "color": "#32a855"
+    },
+    {
+      "name": "Information Retrieval",
+      "sub": "IR",
+      "color": "#32a855"
+    },
+    {
+      "name": "Cognitive Science",
+      "sub": "COG",
+      "color": "#32a855"
+    }
+  ]
