@@ -136,13 +136,13 @@ ninja.data = [{
             },},{id: "news-taught-my-first-class-as-a-mites-semester-project-course-instructor",
           title: 'Taught my first class as a MITES Semester Project Course Instructor!',
           description: "",
-          section: "News",},{id: "news-presented-at-naacl-2024",
-          title: 'Presented at NAACL 2024!',
+          section: "News",},{id: "news-presented-workshop-paper-at-naacl-2024",
+          title: 'Presented workshop paper at NAACL 2024!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-workshop-paper-accepted-to-sigir",
-          title: 'Workshop paper accepted to SIGIR!',
+            },},{id: "news-workshop-paper-accepted-to-sigir-2025",
+          title: 'Workshop paper accepted to SIGIR 2025!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3/";
