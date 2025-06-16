@@ -3,10 +3,24 @@
   {% if conferences_data != blank %}
     {% assign conferences_size = conferences_data | size %}
     
-    <!-- Sort controls -->
+    <!-- Enhanced sort controls -->
     <div class="sort-controls mb-3">
-      <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline')">Sort by Deadline</button>
-      <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title')">Sort by Name</button>
+      <div class="btn-group" role="group">
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title', 'asc')" data-sort="title-asc">Name ↑</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title', 'desc')" data-sort="title-desc">Name ↓</button>
+      </div>
+      <div class="btn-group ms-2" role="group">
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('abstract_deadline', 'asc')" data-sort="abstract_deadline-asc">Abstract ↑</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('abstract_deadline', 'desc')" data-sort="abstract_deadline-desc">Abstract ↓</button>
+      </div>
+      <div class="btn-group ms-2" role="group">
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline', 'asc')" data-sort="deadline-asc">Paper ↑</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline', 'desc')" data-sort="deadline-desc">Paper ↓</button>
+      </div>
+      <div class="btn-group ms-2" role="group">
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('conference_date', 'asc')" data-sort="conference_date-asc">Conference ↑</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('conference_date', 'desc')" data-sort="conference_date-desc">Conference ↓</button>
+      </div>
     </div>
     
     <div
@@ -40,7 +54,10 @@
           {% endif %}
           
           {% for conf in conferences limit: conferences_limit %}
-            <tr data-deadline="{{ conf.deadline }}" data-title="{{ conf.title }}">
+            <tr data-deadline="{{ conf.deadline }}" 
+                data-abstract-deadline="{{ conf.abstract_deadline }}" 
+                data-title="{{ conf.title }}"
+                data-conference-date="{{ conf.date_iso | default: conf.date }}">
               <td>
                 <strong>
                   {% if conf.link %}
@@ -76,7 +93,9 @@
               </td>
               <td>
                 {% if conf.date %}
-                  <strong>{{ conf.date }}</strong>
+                  <span class="conference-date" data-conference-date="{{ conf.date_iso | default: conf.date }}">
+                    <strong>{{ conf.date }}</strong>
+                  </span>
                 {% endif %}
                 {% if conf.place %}
                   <br><small class="text-muted">📍 {{ conf.place }}</small>
@@ -107,7 +126,7 @@
 </div>
 
 <script>
-function sortConferences(sortBy) {
+function sortConferences(sortBy, order) {
   const table = document.getElementById('conferences-table');
   const tbody = table.getElementsByTagName('tbody')[0];
   const rows = Array.from(tbody.getElementsByTagName('tr'));
@@ -118,13 +137,24 @@ function sortConferences(sortBy) {
     if (sortBy === 'deadline') {
       aValue = new Date(a.dataset.deadline || '9999-12-31');
       bValue = new Date(b.dataset.deadline || '9999-12-31');
+    } else if (sortBy === 'abstract_deadline') {
+      aValue = new Date(a.dataset.abstractDeadline || '9999-12-31');
+      bValue = new Date(b.dataset.abstractDeadline || '9999-12-31');
+    } else if (sortBy === 'conference_date') {
+      aValue = new Date(a.dataset.conferenceDate || '9999-12-31');
+      bValue = new Date(b.dataset.conferenceDate || '9999-12-31');
     } else if (sortBy === 'title') {
       aValue = a.dataset.title.toLowerCase();
       bValue = b.dataset.title.toLowerCase();
-      return aValue.localeCompare(bValue);
+      const comparison = aValue.localeCompare(bValue);
+      return order === 'desc' ? -comparison : comparison;
     }
     
-    return aValue - bValue;
+    // For date sorting
+    if (sortBy !== 'title') {
+      const comparison = aValue - bValue;
+      return order === 'desc' ? -comparison : comparison;
+    }
   });
   
   // Clear tbody and re-append sorted rows
@@ -136,18 +166,32 @@ function sortConferences(sortBy) {
     btn.classList.remove('btn-primary');
     btn.classList.add('btn-outline-primary');
   });
-  event.target.classList.remove('btn-outline-primary');
-  event.target.classList.add('btn-primary');
+  
+  // Highlight the active sort button
+  const activeButton = document.querySelector(`[data-sort="${sortBy}-${order}"]`);
+  if (activeButton) {
+    activeButton.classList.remove('btn-outline-primary');
+    activeButton.classList.add('btn-primary');
+  }
+  
+  // Re-apply date highlighting after sorting
+  highlightPastDates();
 }
 
-// Add deadline highlighting
-document.addEventListener('DOMContentLoaded', function() {
-  const deadlineDates = document.querySelectorAll('.deadline-date');
+// Enhanced function to highlight past dates
+function highlightPastDates() {
   const now = new Date();
   
+  // Handle deadline dates (abstract and submission)
+  const deadlineDates = document.querySelectorAll('.deadline-date');
   deadlineDates.forEach(element => {
     const deadlineDate = new Date(element.dataset.deadline);
     const daysUntilDeadline = Math.ceil((deadlineDate - now) / (1000 * 60 * 60 * 24));
+    
+    // Reset classes
+    element.classList.remove('text-muted', 'text-danger', 'text-warning');
+    element.style.textDecoration = '';
+    element.style.fontWeight = '';
     
     if (daysUntilDeadline < 0) {
       element.classList.add('text-muted');
@@ -160,6 +204,43 @@ document.addEventListener('DOMContentLoaded', function() {
       element.style.fontWeight = 'bold';
     }
   });
+  
+  // Handle conference dates
+  const conferenceDates = document.querySelectorAll('.conference-date');
+  conferenceDates.forEach(element => {
+    const conferenceDateStr = element.dataset.conferenceDate;
+    if (conferenceDateStr && conferenceDateStr !== 'N/A') {
+      // Try to parse the conference date
+      let conferenceDate;
+      try {
+        // Handle various date formats
+        if (conferenceDateStr.includes('T')) {
+          // ISO format
+          conferenceDate = new Date(conferenceDateStr);
+        } else {
+          // Try to parse text dates like "July 12-18, 2025"
+          const dateMatch = conferenceDateStr.match(/(\w+)\s+(\d+)(?:-\d+)?,?\s+(\d{4})/);
+          if (dateMatch) {
+            const [, month, day, year] = dateMatch;
+            conferenceDate = new Date(`${month} ${day}, ${year}`);
+          }
+        }
+        
+        if (conferenceDate && !isNaN(conferenceDate) && conferenceDate < now) {
+          element.style.textDecoration = 'line-through';
+          element.classList.add('text-muted');
+        }
+      } catch (e) {
+        // If date parsing fails, just ignore
+        console.log('Could not parse conference date:', conferenceDateStr);
+      }
+    }
+  });
+}
+
+// Run highlighting when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  highlightPastDates();
 });
 </script>
 
@@ -177,7 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
   text-align: right;
 }
 
-.conferences .deadline-date {
+.conferences .deadline-date,
+.conferences .conference-date {
   display: inline-block;
 }
 
@@ -189,5 +271,42 @@ document.addEventListener('DOMContentLoaded', function() {
 .conferences th {
   background-color: var(--bs-light, #f8f9fa);
   font-weight: 600;
+}
+
+/* Dark mode support for table headers */
+@media (prefers-color-scheme: dark) {
+  .conferences th {
+    background-color: var(--bs-dark, #343a40);
+    color: var(--bs-light, #f8f9fa);
+  }
+}
+
+/* Support for explicit dark mode classes (common in Jekyll themes) */
+.dark .conferences th,
+[data-theme="dark"] .conferences th,
+.theme-dark .conferences th {
+  background-color: var(--bs-dark, #343a40);
+  color: var(--bs-light, #f8f9fa);
+}
+
+/* Button group spacing for better mobile experience */
+.conferences .btn-group {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .conferences .sort-controls {
+    text-align: left;
+  }
+  
+  .conferences .btn-group {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .conferences .btn-group .btn {
+    width: 50%;
+  }
 }
 </style>

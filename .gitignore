@@ -12,6 +12,9 @@ node_modules/
 vendor
 .idea
 
+# OLD
+_includes/old_conferences.liquid
+
 assets/tex/*.gz
 assets/tex/*.out
 assets/tex/*.log
