@@ -30,7 +30,7 @@
       "deadline": "2025-02-15 23:59:59",
       "timezone": "UTC-12",
       "place": "Bangkok, Thailand",
-      "date": "July 27-August 1, 2025",
+      "date": "July 27 - August 1, 2025",
       "start": "2025-07-27T00:00:00.000Z",
       "end": "2025-08-01T00:00:00.000Z",
       "sub": [
@@ -38,6 +38,21 @@
         "CL"
       ],
       "note": "Uses ARR on OpenReview. <a href=\"https://2025.aclweb.org/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=183095&copyownerid=320\">CFP.</a>"
+    },
+    {
+      "title": "CogSci",
+      "year": 2025,
+      "id": "cogsci25",
+      "full_name": "Conference of the Cognitive Science Society",
+      "link": "https://cognitivesciencesociety.org/cogsci-2025/",
+      "deadline": "2025-02-03 23:59:59",
+      "timezone": "UTC-12",
+      "place": "San Francisco, California, USA",
+      "date": "July 30 - August 2, 2025",
+      "start": "2025-07-30T00:00:00.000Z",
+      "end": "2025-08-02T00:00:00.000Z",
+      "sub": "COG",
+      "note": "<a href=\"https://cognitivesciencesociety.org/cogsci-2025/\">Dates.</a> <a href=\"https://cognitivesciencesociety.org/submissions-faq/\">CFP.</a>"
     },
     {
       "title": "COLING",
@@ -443,6 +458,24 @@
         "NLP"
       ],
       "note": "<a href=\"https://2025.naacl.org/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=182018&copyownerid=188150\">CFP.</a>"
+    },
+    {
+      "title": "NWAV",
+      "year": 2025,
+      "id": "nwav53",
+      "full_name": "New Ways of Analyzing Variation",
+      "link": "https://sites.lsa.umich.edu/nwav53/",
+      "deadline": "2025-06-15 23:59:59",
+      "timezone": "UTC-12",
+      "place": "Ann Arbor, Michigan, USA",
+      "date": "November 5-7, 2025",
+      "start": "2025-11-05T00:00:00.000Z",
+      "end": "2025-11-07T00:00:00.000Z",
+      "sub": [
+        "CL",
+        "LING"
+      ],
+      "note": "Requires only an abstract. <a href=\"https://sites.lsa.umich.edu/nwav53/\">Dates.</a> <a href=\"https://sites.lsa.umich.edu/nwav53/abstracts/\">CFP.</a>"
     },
     {
       "title": "SIGIR",

@@ -20,10 +20,10 @@
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title', 'asc')" data-sort="title-asc">Name ↑</button>
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('title', 'desc')" data-sort="title-desc">Name ↓</button>
       </div>
-      <div class="btn-group ms-2" role="group">
+      {% comment %} <div class="btn-group ms-2" role="group">
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('abstract_deadline', 'asc')" data-sort="abstract_deadline-asc">Abstract ↑</button>
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('abstract_deadline', 'desc')" data-sort="abstract_deadline-desc">Abstract ↓</button>
-      </div>
+      </div> {% endcomment %}
       <div class="btn-group ms-2" role="group">
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline', 'asc')" data-sort="deadline-asc">Paper ↑</button>
         <button class="btn btn-sm btn-outline-primary" onclick="sortConferences('deadline', 'desc')" data-sort="deadline-desc">Paper ↓</button>
