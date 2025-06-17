@@ -3,6 +3,17 @@
   {% if conferences_data != blank %}
     {% assign conferences_size = conferences_data | size %}
     
+    <!-- Filter controls -->
+    <div class="filter-controls mb-3">
+      <div class="mb-2">
+        <strong>Filter by topics:</strong>
+        <button class="btn btn-sm btn-outline-secondary ms-2" onclick="clearFilters()" id="clear-filters">Show All</button>
+      </div>
+      <div id="tag-filters" class="mb-3">
+        <!-- Tags will be populated by JavaScript -->
+      </div>
+    </div>
+    
     <!-- Enhanced sort controls -->
     <div class="sort-controls mb-3">
       <div class="btn-group" role="group">
@@ -57,7 +68,9 @@
             <tr data-deadline="{{ conf.deadline }}" 
                 data-abstract-deadline="{{ conf.abstract_deadline }}" 
                 data-title="{{ conf.title }}"
-                data-conference-date="{{ conf.date_iso | default: conf.date }}">
+                data-conference-date="{{ conf.date_iso | default: conf.date }}"
+                data-tags="{% if conf.sub %}{{ conf.sub | join: ',' }}{% endif %}"
+                class="conference-row">
               <td>
                 <strong>
                   {% if conf.link %}
@@ -76,6 +89,8 @@
                   </span>
                   <br>
                   <small class="text-muted">{{ conf.abstract_deadline | date: '%H:%M' }} {{ conf.timezone }}</small>
+                  <br>
+                  <small class="countdown-text" data-deadline="{{ conf.abstract_deadline }}"></small>
                 {% else %}
                   <span class="text-muted">N/A</span>
                 {% endif %}
@@ -87,6 +102,8 @@
                   </span>
                   <br>
                   <small class="text-muted">{{ conf.deadline | date: '%H:%M' }} {{ conf.timezone }}</small>
+                  <br>
+                  <small class="countdown-text" data-deadline="{{ conf.deadline }}"></small>
                 {% else %}
                   <span class="text-muted">N/A</span>
                 {% endif %}
@@ -105,7 +122,7 @@
                 {% if conf.sub and conf.sub.size > 0 %}
                   <div class="mb-2">
                     {% for subject in conf.sub %}
-                      <span class="badge badge-secondary badge-sm">{{ subject }}</span>
+                      <span class="badge badge-secondary badge-sm clickable-tag" onclick="filterByTag('{{ subject }}')">{{ subject }}</span>
                     {% endfor %}
                   </div>
                 {% endif %}
@@ -126,6 +143,115 @@
 </div>
 
 <script>
+let activeFilters = new Set();
+let countdownInterval;
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  generateTagFilters();
+  highlightPastDates();
+  startCountdownUpdates();
+});
+
+function generateTagFilters() {
+  const allTags = new Set();
+  const rows = document.querySelectorAll('.conference-row');
+  
+  rows.forEach(row => {
+    const tags = row.dataset.tags;
+    if (tags) {
+      tags.split(',').forEach(tag => {
+        if (tag.trim()) {
+          allTags.add(tag.trim());
+        }
+      });
+    }
+  });
+  
+  const tagFiltersContainer = document.getElementById('tag-filters');
+  const sortedTags = Array.from(allTags).sort();
+  
+  sortedTags.forEach(tag => {
+    const button = document.createElement('button');
+    button.className = 'btn btn-sm btn-outline-info me-1 mb-1 tag-filter';
+    button.textContent = tag;
+    button.onclick = () => toggleFilter(tag);
+    button.dataset.tag = tag;
+    tagFiltersContainer.appendChild(button);
+  });
+}
+
+function toggleFilter(tag) {
+  const button = document.querySelector(`[data-tag="${tag}"]`);
+  
+  if (activeFilters.has(tag)) {
+    activeFilters.delete(tag);
+    button.classList.remove('btn-info');
+    button.classList.add('btn-outline-info');
+  } else {
+    activeFilters.add(tag);
+    button.classList.remove('btn-outline-info');
+    button.classList.add('btn-info');
+  }
+  
+  applyFilters();
+  updateClearButton();
+}
+
+function filterByTag(tag) {
+  // This is called when clicking on badges in the table
+  if (!activeFilters.has(tag)) {
+    toggleFilter(tag);
+  }
+}
+
+function clearFilters() {
+  activeFilters.clear();
+  
+  // Reset all filter buttons
+  document.querySelectorAll('.tag-filter').forEach(button => {
+    button.classList.remove('btn-info');
+    button.classList.add('btn-outline-info');
+  });
+  
+  // Show all rows
+  document.querySelectorAll('.conference-row').forEach(row => {
+    row.style.display = '';
+  });
+  
+  updateClearButton();
+}
+
+function applyFilters() {
+  const rows = document.querySelectorAll('.conference-row');
+  
+  if (activeFilters.size === 0) {
+    // Show all rows if no filters
+    rows.forEach(row => row.style.display = '');
+    return;
+  }
+  
+  rows.forEach(row => {
+    const rowTags = row.dataset.tags ? row.dataset.tags.split(',').map(t => t.trim()) : [];
+    const hasMatchingTag = Array.from(activeFilters).some(filter => rowTags.includes(filter));
+    
+    row.style.display = hasMatchingTag ? '' : 'none';
+  });
+}
+
+function updateClearButton() {
+  const clearButton = document.getElementById('clear-filters');
+  if (activeFilters.size > 0) {
+    clearButton.classList.remove('btn-outline-secondary');
+    clearButton.classList.add('btn-secondary');
+    clearButton.textContent = `Clear Filters (${activeFilters.size})`;
+  } else {
+    clearButton.classList.remove('btn-secondary');
+    clearButton.classList.add('btn-outline-secondary');
+    clearButton.textContent = 'Show All';
+  }
+}
+
 function sortConferences(sortBy, order) {
   const table = document.getElementById('conferences-table');
   const tbody = table.getElementsByTagName('tbody')[0];
@@ -174,8 +300,46 @@ function sortConferences(sortBy, order) {
     activeButton.classList.add('btn-primary');
   }
   
-  // Re-apply date highlighting after sorting
+  // Re-apply filters and highlighting after sorting
+  applyFilters();
   highlightPastDates();
+}
+
+function startCountdownUpdates() {
+  updateCountdowns();
+  // Update countdowns every minute
+  countdownInterval = setInterval(updateCountdowns, 60000);
+}
+
+function updateCountdowns() {
+  const now = new Date();
+  const countdownElements = document.querySelectorAll('.countdown-text');
+  
+  countdownElements.forEach(element => {
+    const deadline = new Date(element.dataset.deadline);
+    const timeDiff = deadline - now;
+    
+    if (timeDiff > 0) {
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      
+      let countdownText = '';
+      if (days > 0) {
+        countdownText = `${days}d ${hours}h ${minutes}m`;
+      } else if (hours > 0) {
+        countdownText = `${hours}h ${minutes}m`;
+      } else {
+        countdownText = `${minutes}m`;
+      }
+      
+      element.textContent = `⏱️ ${countdownText}`;
+      element.className = 'countdown-text text-info';
+    } else {
+      element.textContent = '⏰ Deadline passed';
+      element.className = 'countdown-text text-muted';
+    }
+  });
 }
 
 // Enhanced function to highlight past dates
@@ -238,9 +402,11 @@ function highlightPastDates() {
   });
 }
 
-// Run highlighting when page loads
-document.addEventListener('DOMContentLoaded', function() {
-  highlightPastDates();
+// Cleanup interval when page unloads
+window.addEventListener('beforeunload', function() {
+  if (countdownInterval) {
+    clearInterval(countdownInterval);
+  }
 });
 </script>
 
@@ -273,11 +439,51 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 600;
 }
 
-/* Dark mode support for table headers */
+/* Clickable tags styling */
+.conferences .clickable-tag {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.conferences .clickable-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Filter controls styling */
+.conferences .filter-controls {
+  background-color: var(--bs-light, #f8f9fa);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.conferences .tag-filter {
+  transition: all 0.2s ease;
+}
+
+.conferences .tag-filter:hover {
+  transform: translateY(-1px);
+}
+
+/* Countdown styling */
+.conferences .countdown-text {
+  font-size: 0.8em;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Dark mode support for table headers and filters */
 @media (prefers-color-scheme: dark) {
   .conferences th {
     background-color: var(--bs-dark, #343a40);
     color: var(--bs-light, #f8f9fa);
+  }
+  
+  .conferences .filter-controls {
+    background-color: var(--bs-dark, #343a40);
+    border-color: var(--bs-secondary, #6c757d);
   }
 }
 
@@ -287,6 +493,13 @@ document.addEventListener('DOMContentLoaded', function() {
 .theme-dark .conferences th {
   background-color: var(--bs-dark, #343a40);
   color: var(--bs-light, #f8f9fa);
+}
+
+.dark .conferences .filter-controls,
+[data-theme="dark"] .conferences .filter-controls,
+.theme-dark .conferences .filter-controls {
+  background-color: var(--bs-dark, #343a40);
+  border-color: var(--bs-secondary, #6c757d);
 }
 
 /* Button group spacing for better mobile experience */
@@ -307,6 +520,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   .conferences .btn-group .btn {
     width: 50%;
+  }
+  
+  .conferences .filter-controls {
+    padding: 0.75rem;
   }
 }
 </style>
