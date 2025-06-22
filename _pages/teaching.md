@@ -9,6 +9,7 @@ nav_order: 6
 
 ## Courses Taught
 
+- Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2025)
 - Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2024)
 
 ## Teaching Assistantships

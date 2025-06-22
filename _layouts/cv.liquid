@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<style>
+  .sidebar {
+    display: none !important;
+  }
+  .content, .container {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+</style>
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -22,17 +32,6 @@ layout: default
 
   <article>
     <div class="cv-container">
-      <!-- Download button -->
-      <div class="text-center mb-4">
-        <a
-          href="{{ 'assets/pdf/degenaro.pdf' | relative_url }}"
-          class="btn btn-primary"
-          download="degenaro_cv.pdf"
-        >
-          <i class="fa-solid fa-download me-2"></i>Download CV
-        </a>
-      </div>
-
       <!-- PDF Embed -->
       <div class="pdf-embed">
         <embed
