@@ -148,8 +148,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-workshop-paper-accepted-to-sigir-2025",
-          title: 'Workshop paper accepted to SIGIR 2025!',
+            },},{id: "news-demo-paper-accepted-to-sigir-2025",
+          title: 'Demo paper accepted to SIGIR 2025!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3/";
