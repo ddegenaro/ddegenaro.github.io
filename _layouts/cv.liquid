@@ -2,13 +2,16 @@
 layout: default
 ---
 <style>
-  .sidebar {
+  /* Hide the sidebar column */
+  .col-sm-3 {
     display: none !important;
   }
-  .content, .container {
-    margin-left: 0 !important;
-    max-width: 100% !important;
+  
+  /* Make main content full width */
+  .col-sm-9 {
     width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
   }
 </style>
 <div class="post">
