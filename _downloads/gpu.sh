@@ -1,0 +1,1 @@
+srun --time=12:00:00 --nodes=1 --ntasks=1 --mem=12G --gres=gpu:1 --pty /bin/bash
