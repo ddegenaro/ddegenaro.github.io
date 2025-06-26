@@ -9,7 +9,7 @@ giscus_comments: false
 related_posts: true
 ---
 
-<a href="https://github.com/ddegenaro/ddegenaro.github.io/blob/main/assets/jupyter/entropy_opt.ipynb?raw=1" download>Download this Jupyter notebook</a>
+<a href="/assets/downloads/entropy_opt.ipynb" download="entropy_opt.ipynb">Download this Jupyter notebook</a>
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/entropy_opt.ipynb" | relative_url %}
