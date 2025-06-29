@@ -9,7 +9,7 @@ giscus_comments: false
 related_posts: true
 ---
 
-<a href="/_downloads/shannon_information.ipynb" download="shannon_information.ipynb">Download this Jupyter notebook</a>
+<a href="/downloads/shannon_information.ipynb" download="shannon_information.ipynb">Download this Jupyter notebook</a>
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/shannon_information.ipynb" | relative_url %}

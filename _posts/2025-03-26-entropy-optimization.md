@@ -9,7 +9,7 @@ giscus_comments: false
 related_posts: true
 ---
 
-<a href="/_downloads/entropy_opt.ipynb" download="entropy_opt.ipynb">Download this Jupyter notebook</a>
+<a href="/downloads/entropy_opt.ipynb" download="entropy_opt.ipynb">Download this Jupyter notebook</a>
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/entropy_opt.ipynb" | relative_url %}
