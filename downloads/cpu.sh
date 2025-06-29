@@ -1,1 +1,0 @@
-srun --time=12:00:00 --nodes=1 --ntasks=1 --mem=12G --pty /bin/bash
