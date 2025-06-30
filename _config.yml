@@ -260,11 +260,10 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - downloads/
+  - assets/downloads/
 keep_files:
   - CNAME
   - .nojekyll
-  - downloads/
 
 # Plug-ins
 plugins:

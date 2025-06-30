@@ -9,7 +9,7 @@ giscus_comments: false
 related_posts: true
 ---
 
-<a href="/downloads/get_started.ipynb" download="get_started.ipynb">Download this Jupyter notebook</a>
+<a href="{{ '/assets/downloads/get_started.ipynb' | relative_url }}" download="get_started.ipynb">Download this Jupyter notebook</a>
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/get_started.ipynb" | relative_url %}
