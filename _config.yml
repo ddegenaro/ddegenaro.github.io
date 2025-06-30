@@ -260,6 +260,7 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - assets/downloads/
 keep_files:
   - CNAME
   - .nojekyll
