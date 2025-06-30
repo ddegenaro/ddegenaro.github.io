@@ -156,6 +156,17 @@ ninja.data = [{
             },},{id: "news-won-georgetown-university-s-graduate-student-teaching-assistant-award",
           title: 'Won Georgetown University’s Graduate Student Teaching Assistant Award!',
           description: "",
+          section: "News",},{id: "news-workshop-paper-accepted-to-acl-2025",
+          title: 'Workshop paper accepted to ACL 2025!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_5/";
+            },},{id: "news-completed-my-master-of-science-in-computational-linguistics",
+          title: 'Completed my Master of Science in Computational Linguistics!',
+          description: "",
+          section: "News",},{id: "news-teaching-as-a-mites-semester-project-course-instructor-for-the-second-year-running",
+          title: 'Teaching as a MITES Semester Project Course Instructor for the second year running!...',
+          description: "",
           section: "News",},{id: "projects-entropy-and-learnability",
           title: 'Entropy and learnability',
           description: "How does the entropy of a distribution relate to a language model&#39;s ability to learn from that distribution?",
