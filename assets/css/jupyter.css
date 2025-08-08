@@ -252,10 +252,10 @@ body[data-jp-theme-light="false"] {
     * The following are the main layout colors use in JupyterLab. In a light
     * theme these would go from light to dark.
     */
-  --jp-layout-color0: var(--md-grey-900);
-  --jp-layout-color1: var(--md-grey-800);
-  --jp-layout-color2: var(--md-grey-700);
-  --jp-layout-color3: var(--md-grey-600);
+  --jp-layout-color0: var(--global-bg-color);
+  --jp-layout-color1: var(--md-grey-900);
+  --jp-layout-color2: var(--md-grey-800);
+  --jp-layout-color3: var(--md-grey-700);
 
   /* Inverse Layout
     *
