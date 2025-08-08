@@ -12,9 +12,6 @@ node_modules/
 vendor
 .idea
 
-# OLD
-_includes/old_conferences.liquid
-
 assets/tex/*.gz
 assets/tex/*.out
 assets/tex/*.log
@@ -42,3 +39,6 @@ assets/jupyter/python_review.ipynb
 assets/jupyter/spotify.ipynb
 assets/jupyter/train_word2vec.ipynb
 assets/jupyter/xgboost.ipynb
+
+pull_upstream.bat
+fix_stuff.py

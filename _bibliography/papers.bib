@@ -17,27 +17,65 @@
     url = {https://aclanthology.org/2024.americasnlp-1.22/},
     doi = {10.18653/v1/2024.americasnlp-1.22},
     pages = {188--194},
+    abstract = {This paper presents DC{\_}DMV`s submission to the AmericasNLP 2024 Shared Task 1: Machine Translation Systems for Indigenous Languages. Our submission consists of two multilingual approaches to building machine translation systems from Spanish to eleven Indigenous languages: fine-tuning the 600M distilled variant of NLLB-200, and an experiment in training from scratch a neural network using the Mamba State Space Modeling architecture. We achieve the best results on the test set for a total of 4 of the language pairs between two checkpoints by fine-tuning NLLB-200, and outperform the baseline score on the test set for 2 languages.},
+
     pdf = {https://aclanthology.org/2024.americasnlp-1.22.pdf},
     google_scholar_id = {u-x6o8ySG0sC},
     selected = {true},
     bibtex_show = {true},
     abbr = {NAACL},
-    abstract = {This paper presents DC{\_}DMV`s submission to the AmericasNLP 2024 Shared Task 1: Machine Translation Systems for Indigenous Languages. Our submission consists of two multilingual approaches to building machine translation systems from Spanish to eleven Indigenous languages: fine-tuning the 600M distilled variant of NLLB-200, and an experiment in training from scratch a neural network using the Mamba State Space Modeling architecture. We achieve the best results on the test set for a total of 4 of the language pairs between two checkpoints by fine-tuning NLLB-200, and outperform the baseline score on the test set for 2 languages.}
 }
 
-@misc{samuel2025mmmorrfmultimodalmultilingualmodularized,
-    title={MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion}, 
-    author={Saron Samuel and Dan DeGenaro and Jimena Guallar-Blasco and Kate Sanders and Oluwaseun Eisape and Arun Reddy and Alexander Martin and Andrew Yates and Eugene Yang and Cameron Carpenter and David Etter and Efsun Kayi and Matthew Wiesner and Kenton Murray and Reno Kriz},
-    year={2025},
-    eprint={2503.20698},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2503.20698},
-    doi = {https://doi.org/10.48550/arXiv.2503.20698},
-    pdf = {https://arxiv.org/pdf/2503.20698},
+@inproceedings{10.1145/3726302.3730157,
+    author = {Samuel, Saron and DeGenaro, Dan and Guallar-Blasco, Jimena and Sanders, Kate and Eisape, Seun and Reddy, Arun and Martin, Alexander and Yates, Andrew and Yang, Eugene and Carpenter, Cameron and Etter, David and Kayi, Efsun and Wiesner, Matthew and Murray, Kenton and Kriz, Reno},
+    title = {MMMORRF: Multimodal Multilingual MOdularized Reciprocal Rank Fusion},
+    year = {2025},
+    isbn = {9798400715921},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3726302.3730157},
+    doi = {10.1145/3726302.3730157},
+    abstract = {Videos inherently contain multiple modalities, including visual events, text overlays, sounds, and speech, all of which are important for retrieval. However, state-of-the-art multimodal language models like VAST and LanguageBind are built on vision-language models (VLMs), and thus overly prioritize visual signals. Retrieval benchmarks further reinforce this bias by focusing on visual queries and neglecting other modalities. We create a search system MMMORRF that extracts text and features from both visual and audio modalities and integrates them with a novel modality-aware weighted reciprocal rank fusion. MMMORRF is both effective and efficient, demonstrating practicality in searching videos based on users' information needs instead of visual descriptive queries. We evaluate MMMORRF on MultiVENT 2.0 and TVR, two multimodal benchmarks designed for more targeted information needs, and find that it improves nDCG@20 by 81\% over leading multimodal encoders and 37\% over single-modality retrieval.},
+    booktitle = {Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+    pages = {4004–4009},
+    numpages = {6},
+    keywords = {fusion, multilingual, multimodal, video retrieval},
+    location = {Padua, Italy},
+    series = {SIGIR '25},
+
+    pdf = {https://dl.acm.org/doi/pdf/10.1145/3726302.3730157},
     google_scholar_id = {d1gkVwhDpl0C},
     selected = {true},
     bibtex_show = {true},
     abbr = {SIGIR},
-    abstract = {Videos inherently contain multiple modalities, including visual events, text overlays, sounds, and speech, all of which are important for retrieval. However, state-of-the-art multimodal language models like VAST and LanguageBind are built on vision-language models (VLMs), and thus overly prioritize visual signals. Retrieval benchmarks further reinforce this bias by focusing on visual queries and neglecting other modalities. We create a search system MMMORRF that extracts text and features from both visual and audio modalities and integrates them with a novel modality-aware weighted reciprocal rank fusion. MMMORRF is both effective and efficient, demonstrating practicality in searching videos based on users' information needs instead of visual descriptive queries. We evaluate MMMORRF on MultiVENT 2.0 and TVR, two multimodal benchmarks designed for more targeted information needs, and find that it improves nDCG@20 by 81% over leading multimodal encoders and 37% over single-modality retrieval, demonstrating the value of integrating diverse modalities.}
+}
+
+@inproceedings{degenaro-etal-2025-fortify,
+    title = "{FORTIFY}: Generative Model Fine-tuning with {ORPO} for {R}e{T}rieval Expansion of {I}n{F}ormal {N}ois{Y} Text",
+    author = "DeGenaro, Dan  and
+      Yang, Eugene  and
+      Etter, David  and
+      Carpenter, Cameron  and
+      Sanders, Kate  and
+      Martin, Alexander  and
+      Murray, Kenton  and
+      Kriz, Reno",
+    editor = "Kriz, Reno  and
+      Murray, Kenton",
+    booktitle = "Proceedings of the 1st Workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR 2025)",
+    month = aug,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.magmar-1.13/",
+    doi = "10.18653/v1/2025.magmar-1.13",
+    pages = "100--115",
+    ISBN = "979-8-89176-280-0",
+    abstract = "Despite recent advancements in neural retrieval, representing text fragments or phrases with proper contextualized embeddings is still challenging. Particularly in video retrieval, where documents are text extracted through OCR from the frames or ASR from audio tracks, the textual content is rarely complete sentences but only a bag of phrases. In this work, we propose FORTIFY, a generative model fine-tuning approach for noisy document rewriting and summarization, to improve the downstream retrieval effectiveness. By experimenting on MultiVENT 2.0, an informational video retrieval benchmark, we show Llama fine-tuned with FORTIFY provides an effective document expansion, leading to a 30{\%} improvement over prompting an out-of-box Llama model on nDCG@10. Zero-shot transferring the model tailored for MultiVENT 2.0 to two out-of-distribution datasets still demonstrates competitive retrieval effectiveness to other document preprocessing alternatives.",
+
+    pdf = {https://aclanthology.org/2025.magmar-1.13.pdf},
+    google_scholar_id = {2osOgNQ5qMEC},
+    selected = {true},
+    bibtex_show = {true},
+    abbr = {ACL},
 }
