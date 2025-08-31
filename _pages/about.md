@@ -2,15 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD Student @ Georgetown Computer Science
+subtitle: PhD Student @ Georgetown Computer Science
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Poulton Hall 240</p>
-    <p>1421 37th Street NW</p>
+    <p>St. Mary's Hall, </p>
+    <p>3700 Reservoir Road NW</p>
     <p>Washington, DC 20057</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm an incoming PhD student at Georgetown University, where I will be working with [Dr. Sarah Bargal](https://gufaculty360.georgetown.edu/s/contact/0031Q00002cJxDQQA0/sarah-bargal) on multimodal intelligent systems -- those that integrate text, vision, and other forms of data such as audio. I'm also affiliated with the [PICoL Lab](https://picol-georgetown.github.io/) led by [Dr. Ethan Wilcox](https://wilcoxeg.github.io/).
+I'm a PhD student at Georgetown University, where I work with [Dr. Sarah Bargal](https://gufaculty360.georgetown.edu/s/contact/0031Q00002cJxDQQA0/sarah-bargal) on multimodal intelligent systems -- those that integrate text, vision, and other forms of data such as audio. I'm also affiliated with the [PICoL Lab](https://picol-georgetown.github.io/) led by [Dr. Ethan Wilcox](https://wilcoxeg.github.io/) as well as the broader [GUCL interest group](https://gucl.georgetown.edu/).
 
 I am interested in the development of safe, ethical, and energy-efficient multimodal intelligent systems that serve the needs of everyday people while respecting important rights such as privacy, copyright, and the right to be forgotten.
 
