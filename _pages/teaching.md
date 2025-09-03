@@ -16,7 +16,8 @@ nav_order: 6
 
 ### Georgetown University
 
-- COSC-3470 | Deep Learning, taught by [Sarah Bargal](https://bargal.georgetown.domains/) (Spring 2025)
+- COSC-3470 | Deep Learning, taught by [Sarah Bargal](https://bargal.georgetown.domains/) (Fall 2025 - **in progress**)
+- COSC-3470 | Deep Learning, taught by Sarah Bargal (Spring 2025)
 - COSC-5455 | Deep Learning, taught by Sarah Bargal (Fall 2024)
 - COSC-5470 | Deep Learning for Computer Vision, taught by Sarah Bargal (Spring 2024)
 - COSC-5580 | Introduction to Data Analytics, taught by [Lisa Singh](https://people.cs.georgetown.edu/~singh/) (Fall 2023)
@@ -32,6 +33,8 @@ nav_order: 6
 
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
+The basis of some guest lecturing I've done in Sarah Bargal's classes mentioned above.
+
 - [Getting started]({% post_url 2024-09-18-getting-started-pytorch %})
 - [Training a CNN]({% post_url 2024-09-18-mnist-cnn %})
 
@@ -40,6 +43,8 @@ nav_order: 6
 [Lecture/Jupyter notebook on n-grams]({% post_url 2025-03-21-n-grams %})
 
 ### Workshop on LaTeX
+
+The slides for a workshop I've delivered a few times to my fellow graduate students at Georgetown's Department of Linguistics.
 
 [Slides]({% post_url 2024-09-20-latex-workshop %})
 
