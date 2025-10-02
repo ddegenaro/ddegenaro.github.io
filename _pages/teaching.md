@@ -31,6 +31,12 @@ nav_order: 6
 
 ## Miscellaneous
 
+### Student Projects Advised
+
+- Keven Amaya-Muñoz, Arko Barua, and Luan Hoang, to appear at Massachusetts Institute of Technology Undergraduate Research Conference (URTC), 2025.
+- Melissa Alfaro-Zeledon and Rida Karim, Identifying Key Factors for Femicide Prevention and Policy Development: Leveraging Supervised Machine Learning with Temporal and Geospatial Analysis. Lightning Talk at URTC, 2024.
+- Hubert Hsu and Bethany Ray, MT-MOE: Protein-Specific Drug Design Utilizing Mixture of Experts Transformers. Poster at URTC, 2024
+
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
 The basis of some guest lecturing I've done in Sarah Bargal's classes mentioned above.
