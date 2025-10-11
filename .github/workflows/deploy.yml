@@ -94,6 +94,7 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          find _site/assets/downloads -name "*.download" -exec sh -c 'mv "$1" "${1%.download}"' _ {} \;
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
