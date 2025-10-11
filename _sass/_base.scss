@@ -250,6 +250,16 @@ ul.task-list input[type="checkbox"] {
   opacity: 0.95;
 }
 
+// Replace navbar brand text with home icon on non-about pages
+.navbar-brand.title {
+  font-size: 0;
+  
+  &::before {
+    content: "🏠";
+    font-size: 1.5rem;
+  }
+}
+
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
   border: 1px solid var(--global-divider-color);
