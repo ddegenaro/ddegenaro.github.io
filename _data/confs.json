@@ -23,36 +23,36 @@
     },
     {
       "title": "ACL",
-      "year": 2025,
-      "id": "acl25",
+      "year": 2026,
+      "id": "acl26",
       "full_name": "Annual Meeting of the Association for Computational Linguistics",
-      "link": "https://2025.aclweb.org/",
-      "deadline": "2025-02-15 23:59:59",
+      "link": "https://2026.aclweb.org/",
+      "deadline": "2026-01-05 23:59:59",
       "timezone": "UTC-12",
-      "place": "Bangkok, Thailand",
+      "place": "San Diego, California, USA",
       "date": "July 27 - August 1, 2025",
-      "start": "2025-07-27T00:00:00.000Z",
-      "end": "2025-08-01T00:00:00.000Z",
+      "start": "2026-07-02T00:00:00.000Z",
+      "end": "2026-07-07T00:00:00.000Z",
       "sub": [
         "NLP",
         "CL"
       ],
-      "note": "Uses ARR on OpenReview. <a href=\"https://2025.aclweb.org/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=183095&copyownerid=320\">CFP.</a>"
+      "note": "Uses ARR on OpenReview. <a href=\"https://2026.aclweb.org/#important-dates\">Dates.</a> <a href=\"https://2026.aclweb.org/calls/main_conference_papers/\">CFP.</a>"
     },
     {
       "title": "CogSci",
-      "year": 2025,
-      "id": "cogsci25",
+      "year": 2026,
+      "id": "cogsci26",
       "full_name": "Conference of the Cognitive Science Society",
-      "link": "https://cognitivesciencesociety.org/cogsci-2025/",
-      "deadline": "2025-02-03 23:59:59",
+      "link": "https://cognitivesciencesociety.org/cogsci-2026/",
+      "deadline": "2026-02-03 23:59:59",
       "timezone": "UTC-12",
-      "place": "San Francisco, California, USA",
-      "date": "July 30 - August 2, 2025",
-      "start": "2025-07-30T00:00:00.000Z",
-      "end": "2025-08-02T00:00:00.000Z",
+      "place": "Rio de Janeiro, Brazil",
+      "date": "July 22-25, 2026",
+      "start": "2025-07-22T00:00:00.000Z",
+      "end": "2025-07-25T00:00:00.000Z",
       "sub": "COG",
-      "note": "<a href=\"https://cognitivesciencesociety.org/cogsci-2025/\">Dates.</a> <a href=\"https://cognitivesciencesociety.org/submissions-faq/\">CFP.</a>"
+      "note": "<a href=\"https://cognitivesciencesociety.org/cogsci-2026/\">Dates.</a> <a href=\"https://cognitivesciencesociety.org/submissions-faq/\">CFP.</a>"
     },
     {
       "title": "COLING",
@@ -153,27 +153,6 @@
       "note": "Uses ARR on OpenReview. <a href=\"https://2026.eacl.org/calls/papers/#important-dates\">Dates.</a> <a href=\"https://2026.eacl.org/calls/papers/\">CFP.</a>"
     },
     {
-      "title": "ECAI",
-      "year": 2025,
-      "id": "ecai25",
-      "full_name": "European Conference on Artificial Intelligence",
-      "link": "https://ecai2025.org/",
-      "deadline": "2025-05-06 23:59:59",
-      "abstract_deadline": "2025-04-29 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Bologna, Italy",
-      "date": "October 25-30, 2025",
-      "start": "2025-10-25T00:00:00.000Z",
-      "end": "2025-10-30T00:00:00.000Z",
-      "sub": [
-        "CV",
-        "KR",
-        "ML",
-        "NLP"
-      ],
-      "note": "<a href='https://www.ecai2024.eu/calls/main-track'>Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=181452&copyownerid=187908\">CFP.</a>"
-    },
-    {
       "title": "ECCV",
       "year": 2026,
       "id": "eccv26",
@@ -204,22 +183,6 @@
       "end": "2026-04-02T00:00:00.000Z",
       "sub": "IR",
       "note": "<a href='https://ecir2026.eu/calls'>Dates.</a> <a href=\"https://ecir2026.eu/calls/call-for-full-papers\">CFP.</a>"
-    },
-    {
-      "title": "ECMLPKDD",
-      "year": 2025,
-      "id": "ecmlpkdd25",
-      "full_name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
-      "link": "https://ecmlpkdd.org/2025/",
-      "deadline": "2025-03-14 23:59:59",
-      "abstract_deadline": "2025-03-07 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Porto, Portugal",
-      "date": "September 15-19, 2025",
-      "start": "2025-09-15T00:00:00.000Z",
-      "end": "2025-09-19T00:00:00.000Z",
-      "sub": "ML",
-      "note": "<a href=\"https://ecmlpkdd.org/2025/submissions-research-track/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=181199&copyownerid=187908\">CFP.</a>"
     },
     {
       "title": "EMNLP",
@@ -286,21 +249,6 @@
       "note": "<a href=\"https://icdar2026.org/index.php/important-dates/\">Dates.</a> <a href=\"https://icdar2026.org/\">CFP.</a>"
     },
     {
-      "title": "ICIP",
-      "year": 2025,
-      "id": "icip25",
-      "full_name": "The IEEE International Conference on Image Processing",
-      "link": "https://2025.ieeeicip.org",
-      "deadline": "2025-02-05 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Anchorage, Alaska, USA",
-      "date": "September 14-17, 2025",
-      "start": "2025-09-14T00:00:00.000Z",
-      "end": "2025-09-17T00:00:00.000Z",
-      "sub": "CV",
-      "note": "<a href=\"https://2025.ieeeicip.org/important-dates/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=184660&copyownerid=183668\">CFP.</a>"
-    },
-    {
       "title": "ICLR",
       "year": 2026,
       "id": "iclr26",
@@ -324,16 +272,16 @@
     },
     {
       "title": "ICML",
-      "year": 2025,
-      "id": "icml25",
+      "year": 2026,
+      "id": "icml26",
       "full_name": "International Conference on Machine Learning",
-      "link": "https://icml.cc/Conferences/2025",
-      "deadline": "2025-02-01 23:59:59",
+      "link": "https://icml.cc/Conferences/2026",
+      "deadline": "2026-02-01 23:59:59",
       "timezone": "UTC-12",
-      "place": "Vancouver, British Columbia, Canada",
-      "date": "July 13-19, 2025",
-      "start": "2025-07-13T00:00:00.000Z",
-      "end": "2025-07-19T00:00:00.000Z",
+      "place": "Seoul, South Korea",
+      "date": "July 13-19, 2026",
+      "start": "2026-07-13T00:00:00.000Z",
+      "end": "2026-07-19T00:00:00.000Z",
       "sub": [
         "ML",
         "CV",
@@ -341,53 +289,7 @@
         "SP",
         "KR"
       ],
-      "note": "<a href=\"https://icml.cc/Conferences/2025/Dates\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=182305&copyownerid=187908\">CFP.</a>"
-    },
-    {
-      "title": "ICMR",
-      "year": 2025,
-      "id": "icmr25",
-      "full_name": "The ACM International Conference on Multimedia Retrieval",
-      "link": "https://www.icmr-2025.org/",
-      "deadline": "2025-02-23 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Chicago, Illinois, USA",
-      "date": "June 30 - July 3, 2025",
-      "start": "2025-06-30T00:00:00.000Z",
-      "end": "2025-07-03T00:00:00.000Z",
-      "sub": "IR",
-      "note": "<a href=\"https://www.icmr-2025.org/important-dates/\">Dates.</a> <a href=\"https://www.icmr-2025.org/call-for-papers/\">CFP.</a>"
-    },
-    {
-      "title": "IJCAI",
-      "year": 2025,
-      "id": "ijcai25",
-      "full_name": "International Joint Conference on Artificial Intelligence",
-      "link": "https://2025.ijcai.org/",
-      "deadline": "2025-01-23 23:59:59",
-      "abstract_deadline": "2025-01-16 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Montreal, Quebec, Canada",
-      "date": "August 16-22, 2025",
-      "start": "2025-08-16T00:00:00.000Z",
-      "end": "2025-08-22T00:00:00.000Z",
-      "sub": "ML",
-      "note": "<a href=\"https://2025.ijcai.org/important-dates/\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=182646&copyownerid=163282\">CFP.</a>"
-    },
-    {
-      "title": "IJCNN",
-      "year": 2025,
-      "id": "ijcai25",
-      "full_name": "International Joint Conference on Neural Networks",
-      "link": "https://2025.ijcnn.org/",
-      "deadline": "2025-01-30 23:59:59",
-      "timezone": "UTC-12",
-      "place": "Rome, Italy",
-      "date": "June 30 - July 5, 2025",
-      "start": "2025-06-30T00:00:00.000Z",
-      "end": "2025-07-05T00:00:00.000Z",
-      "sub": "ML",
-      "note": "<a href=\"https://2025.ijcnn.org/authors/important-dates\">Dates.</a> <a href=\"https://2025.ijcnn.org/authors/call-for-papers\">CFP.</a>"
+      "note": "<a href=\"https://icml.cc/Conferences/2026/Dates\">Dates.</a> <a href=\"https://icml.cc/Conferences/2026/CallForPapers\">CFP.</a>"
     },
     {
       "title": "InterSpeech",
@@ -419,6 +321,25 @@
       "end": "2025-11-17T00:00:00.000Z",
       "sub": "KR",
       "note": "<a href=\"https://kr.org/KR2025/dates.html\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=186165&copyownerid=192170\">CFP.</a>"
+    },
+    {
+      "title": "LREC",
+      "year": 2026,
+      "id": "lrec2026",
+      "full_name": "Language Resources and Evaluation",
+      "link": "https://lrec2026.info/",
+      "deadline": "2025-10-24 23:59:59",
+      "timezone": "UTC-12",
+      "place": "Palma, Mallorca, Spain",
+      "date": "October 27-31, 2025",
+      "start": "2026-05-11T00:00:00.000Z",
+      "end": "2026-05-16T00:00:00.000Z",
+      "sub": [
+        "NLP",
+        "SP",
+        "IR"
+      ],
+      "note": "<a href=\"https://lrec2026.info/\">Dates.</a> <a href=\"https://lrec2026.info/third-call-for-papers/\">CFP.</a>"
     },
     {
       "title": "MM",
@@ -479,19 +400,19 @@
     },
     {
       "title": "SIGIR",
-      "year": 2025,
-      "id": "sigir25",
+      "year": 2026,
+      "id": "sigir26",
       "full_name": "International ACM SIGIR Conference on Research and Development in Information Retrieval",
-      "link": "https://sigir2025.dei.unipd.it/",
-      "deadline": "2025-01-23 23:59:59",
-      "abstract_deadline": "2025-01-16 23:59:59",
+      "link": "https://sigir2026.org/en-AU",
+      "deadline": "2026-01-22 23:59:59",
+      "abstract_deadline": "2026-01-15 23:59:59",
       "timezone": "UTC-12",
-      "place": "Padova, Italy",
-      "date": "July 13-17, 2025",
-      "start": "2025-07-13T00:00:00.000Z",
-      "end": "2025-07-17T00:00:00.000Z",
+      "place": "Melbourne | Naarm, Australia",
+      "date": "July 20-24, 2026",
+      "start": "2026-07-20T00:00:00.000Z",
+      "end": "2026-07-24T00:00:00.000Z",
       "sub": "IR",
-      "note": "<a href=\"https://sigir2025.dei.unipd.it/#important-dates\">Dates.</a> <a href=\"http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=182648&copyownerid=163282\">CFP.</a>"
+      "note": "<a href=\"https://sigir2026.org/en-AU/pages/attending/key-dates\">Dates.</a> <a href=\"https://sigir2026.org/en-AU\">CFP.</a>"
     },
     {
       "title": "UAI",
