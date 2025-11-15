@@ -1,0 +1,1288 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# A brief introduction to the Python programming language"
+      ],
+      "metadata": {
+        "id": "Fh-zf3SvZmHM"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## What is Python?"
+      ],
+      "metadata": {
+        "id": "kLZVbga4cwK0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[Python](https://en.wikipedia.org/wiki/Python_(programming_language) is a \"high-level\" programming language - one that is fairly easy for a human to learn to understand and use.\n",
+        "\n",
+        "It relies on a program called an \"interpreter\" which \"translates\" human-readable instructions that we write in the Python language into machine code that can be used to directly manipulate computer hardware.\n",
+        "\n",
+        "It is the most popular programming language at present, by many [measures](https://en.wikipedia.org/wiki/TIOBE_index). It is especially popular with scientific researchers for its readability, relative simplicity (as compared to other programming languages), and because of [the many, many \"libraries\" of useful Python programs](https://pypi.org/) that have been authored and open-sourced (meaning we can all use them for free)."
+      ],
+      "metadata": {
+        "id": "2QfdDAUjZwIv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Basics"
+      ],
+      "metadata": {
+        "id": "xU6hXQGWczl2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Let's begin with a `print` statement. A `print` statement accepts any piece of information that we can render as text and displays it for us.\n",
+        "\n",
+        "`print` statements are incredibly useful for developing programs that display information to the user of the program, as well as debugging (figuring out why your program isn't working).\n",
+        "\n",
+        "You can run the following code cells by clicking the \"play\" button, or using Shift+Enter.\n",
+        "\n",
+        "The first cell you run will take awhile as Google Colab sets up a connection for you."
+      ],
+      "metadata": {
+        "id": "sJXetqIKbTDY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# You can pass in a piece of text and display it.\n",
+        "print('Hello, world!')\n",
+        "\n",
+        "# You must surround that text with single or double quotes.\n",
+        "print(\"Hello, world!\")"
+      ],
+      "metadata": {
+        "id": "CRDg2rOIZvpg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Note that the above two lines of code do the exact same thing. In Python, a **string** (an ordered sequence of text characters) can be specified using either single quotes or double quotes. Both are fine!\n",
+        "\n",
+        "We can check whether something is a string, a number, or any other sort of **data type** using the `type` function."
+      ],
+      "metadata": {
+        "id": "54r_SrSHcTGv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# The type() function tells you that 'Hello, world!' is a string: type str.\n",
+        "print(type('Hello, world!'))\n",
+        "\n",
+        "# Single or double quotes - it's still a string!\n",
+        "print(type(\"Hello, world!\"))"
+      ],
+      "metadata": {
+        "id": "f8KsXBsMcSLb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Common data types"
+      ],
+      "metadata": {
+        "id": "n-CAt-26dRDl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Besides the `str` type for text, some other important data types are `int` (integers), `float` (numbers with decimal points), and `bool` (booleans, which take the values `True` and `False`)."
+      ],
+      "metadata": {
+        "id": "jeKS6UsXcmSd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Integers are numbers with no decimal point.\n",
+        "print('the type of 37 is:', type(37))\n",
+        "\n",
+        "# Floating point numbers have a decimal point somewhere.\n",
+        "print('the type of 37.0 is:', type(37.0))\n",
+        "\n",
+        "# Actually, nothing needs to follow the decimal point!\n",
+        "print('the type of 37. is:', type(37.))\n",
+        "\n",
+        "# Note that True is capitalized and does not have quotes!\n",
+        "print('the type of True is:', type(True))\n",
+        "\n",
+        "# Same for False!\n",
+        "print('the type of False is:', type(False))"
+      ],
+      "metadata": {
+        "id": "ziAjjhqFck9Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You may have noticed by this point that text written in the code cells that is preceded by a hashtag (#) symbol is just more writing - it is not considered code!\n",
+        "\n",
+        "These are referred to as **comments** - text that is intended to be ignored by the Python interpreter.\n",
+        "\n",
+        "Comments are important because they allow us to remember what a piece of code does if we come back to it after a long time. They also help other programmers understand our code without looking too closely."
+      ],
+      "metadata": {
+        "id": "eFwfq3QDdumh"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Mathematics"
+      ],
+      "metadata": {
+        "id": "Yw7SnMTDde5o"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Computers are mainly designed to work with numbers, or things representable as numbers. Here are the basic mathematical operations that Python offers."
+      ],
+      "metadata": {
+        "id": "ECaiXDL7eNpy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('7 + 3 =',  7 + 3)  # Addition.\n",
+        "print('7 - 3 =',  7 - 3)  # Subtraction.\n",
+        "print('3 - 7 =',  3 - 7)  # Negatives are fine!\n",
+        "print('7 * 3 =',  7 * 3)  # Multiplication uses an asterisk.\n",
+        "print('7 / 3 =',  7 / 3)  # Division uses a forward slash.\n",
+        "print('7 ** 3 =', 7 ** 3) # Power (exponent) - seven to the third power.\n",
+        "print('7 // 3 =', 7 // 3) # Integer division - 7/3, and chop off the decimal.\n",
+        "print('7 % 3 =',  7 % 3)  # Modulo - 7/3, and give just the remainder."
+      ],
+      "metadata": {
+        "id": "Bo3Ckt3CdO49"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Boolean logic (`True` and `False`)"
+      ],
+      "metadata": {
+        "id": "2irZwHVYdhlB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "There are many expressions and operators for deciding if a statement is `True` or `False`. This is important, because it is a simple way for the program to make different decisions in different circumstances! We'll see how that works in the next section."
+      ],
+      "metadata": {
+        "id": "MN-rK0L7fUmA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('7 == 3:', 7 == 3) # Check for equality - note double equal sign!\n",
+        "print('7 != 3:', 7 != 3) # Not equal - exclamation points often mean \"not\" in programming.\n",
+        "print('7 > 3:',  7 > 3)  # Greater.\n",
+        "print('7 < 3:',  7 < 3)  # Less.\n",
+        "print('7 >= 3:', 7 >= 3) # Greater OR equal.\n",
+        "print('7 <= 3:', 7 <= 3) # Less OR equal."
+      ],
+      "metadata": {
+        "id": "WpMu3aD0e9k6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Additionally, we can combine several conditions together using logical operators (`and`, `or`, and `not`):"
+      ],
+      "metadata": {
+        "id": "kVQ_ST5febuf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('     True and True:   ', True and True)\n",
+        "print('  True or not True:   ', True or not True)\n",
+        "print('not False and True:   ', not False and True)\n",
+        "print('    False or False:   ', False or False)"
+      ],
+      "metadata": {
+        "id": "X7Wtx4W5eioz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Using boolean logic in a program\n",
+        "\n",
+        "Let's have the program make a choice! We let a program make decisions using `if`, `elif` (short for else-if) and `else` statements.\n",
+        "\n",
+        "An `if` statement checks whether a **condition** is `True` or `False`. If the condition is `True`, the code associated with that `if` statement is executed.\n",
+        "\n",
+        "We may optionally add `elif` or `else` statements, but these are never required.\n",
+        "\n",
+        "We associate code with each \"branch\" of the `if`-`elif`-`else` statements by **indenting** it (starting each line with a Tab character). In general, code associated with some particular context is tabbed over the requisite number of times.\n",
+        "\n",
+        "NOTE: In any given collection of `if`-`elif`-`else` statements, only ONE of the branches is executed.\n",
+        "\n",
+        "Try playing with the condition below and see how this works!"
+      ],
+      "metadata": {
+        "id": "BRSqYtq9gPu2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Store the value of the statement (5 > 3) into a variable.\n",
+        "# The variable name is \"condition\".\n",
+        "#\n",
+        "# The following line of code can be read as:\n",
+        "# \"Store the value of the expression (5 > 3) into the condition variable.\"\n",
+        "#\n",
+        "# Note the single equals sign (=) which means:\n",
+        "# \"Store the value on the right into the variable on the left.\"\n",
+        "\n",
+        "condition = (5 < 3) # Evaluates the expression (5 > 3), then stores it.\n",
+        "\n",
+        "if condition: # An if statement checks if a condition is True.\n",
+        "    print('5 is greater than 3.') # line begins with a Tab\n",
+        "    print('Condition evaluates to:', condition) # this line too!\n",
+        "else: # If the statement is False, we can include an else statement to execute instead.\n",
+        "    print('5 is not greater than 3.') # Tab once again, this time for the else statement\n",
+        "    print('Condition evaluates to:', condition) # and again!"
+      ],
+      "metadata": {
+        "id": "39pRm154f_9w"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the above example, note that we did not put quotes around the word \"condition\" when writing our code.\n",
+        "\n",
+        "This is because `condition` is not a string or a piece of text here - it is the **name of a variable**.\n",
+        "\n",
+        "A variable is a way to refer back to a stored value. Whenever we use that variable, we access and operate on its value.\n",
+        "\n",
+        "A slightly more complicated example is below with 3 branches. Try playing with values of `x` and `y` to see what happens."
+      ],
+      "metadata": {
+        "id": "hkluyzm0h3uI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 7 # Store the value 7 into the variable x.\n",
+        "y = 2 # Store the value 2 into the variable y.\n",
+        "\n",
+        "if x > y: # You can evaluate the condition right in the if statement!\n",
+        "    print('x is more.')\n",
+        "elif y > x: # Same for an elif statement.\n",
+        "    print('y is more.')\n",
+        "else: # If neither is more than the other, they must be equal!\n",
+        "    print('x and y are the same.')"
+      ],
+      "metadata": {
+        "id": "F0CyBGl-gbTz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Note that the first branch whose condition evaluates to `True` is executed!"
+      ],
+      "metadata": {
+        "id": "jcbLcXVaiNHf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 6 # Now, store the value 6 into the variable x.\n",
+        "y = 6 # Also, update y to contain the value 6.\n",
+        "\n",
+        "if x == y: # If x and y are both 6, this is True.\n",
+        "    print('x equals y.')\n",
+        "elif x >= y: # If x and y are both 6, this is also True, but is skipped.\n",
+        "    print('x is greater than y or equal to y.')\n",
+        "else:\n",
+        "    print('x is less than y.')"
+      ],
+      "metadata": {
+        "id": "3QGMbvTtiV69"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Data structures\n",
+        "\n",
+        "A **data structure** is a data type that is used to organize, access, and store pieces of data.\n",
+        "\n",
+        "Python implements a few basic ones. Many others are available through built-in libraries such as [collections](https://docs.python.org/3/library/collections.html) and third-party libraries available through PyPI.\n",
+        "\n",
+        "The basic ones are often powerful enough for most purposes."
+      ],
+      "metadata": {
+        "id": "R25MLP3oRiHw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Lists"
+      ],
+      "metadata": {
+        "id": "ATyXXjbofWpq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Lists** are ordered sequences of data. They are **mutable** (you can update them after creating them by adding more items, removing items, replacing items, etc).\n",
+        "\n",
+        "A list is specified using square brackets `[]` and comma-separating the entries."
+      ],
+      "metadata": {
+        "id": "Q9CbIUk6SA6i"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Creating a list:\n",
+        "x = [5, 6, 7, 8, 9, 10, 11, 12]\n",
+        "print('                                  original list:   ', x)\n",
+        "\n",
+        "# Appending an entry to the end of a list:\n",
+        "x.append(13)\n",
+        "print('                  after appending 13 to the end:   ', x)\n",
+        "\n",
+        "# Replacing an entry in a list - note that the first position is numbered 0!\n",
+        "x[2] = 30 # Updating the third position to have the value 30.\n",
+        "print('replaced third position (index 2) with value 30:   ', x)\n",
+        "\n",
+        "# Deleting an entry from a list:\n",
+        "del x[2]\n",
+        "print('                             deleted that entry:   ', x)\n",
+        "\n",
+        "# Inserting an entry into a list:\n",
+        "x.insert(2, 7)\n",
+        "print('         inserted 7 at third position (index 2):   ', x)\n",
+        "\n",
+        "# \"Slicing\" = selecting some contiguous part of the list.\n",
+        "# Note that we are selecting indices 2-4 inclusive, which are\n",
+        "# the third, fourth, and fifth positions:\n",
+        "print('     selecting entries at positions 3, 4, and 5:   ', x[2:5])\n",
+        "\n",
+        "# Checking for membership of some element:\n",
+        "print('              checking whether 5 is in the list:   ', 5 in x)\n",
+        "print('              checking whether 1 is in the list:   ', 1 in x)\n",
+        "\n",
+        "# Checking how many entries are in the list:\n",
+        "print('                       the length of the list x:   ', len(x))"
+      ],
+      "metadata": {
+        "id": "d9VMIocAiiO_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Tuples"
+      ],
+      "metadata": {
+        "id": "y7jbxSmHfTUS"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Tuples are just like lists, except for two key differences:\n",
+        "- They are specified using parentheses `()` instead of brackets.\n",
+        "- They are **immutable** (cannot be modified after being created)."
+      ],
+      "metadata": {
+        "id": "gOq9zBJNTyxQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Creating a tuple:\n",
+        "x = (5, 6, 7, 8, 9, 10, 11, 12)\n",
+        "print('                            original tuple:   ', x)\n",
+        "\n",
+        "# Slicing is possible, nothing else is though!\n",
+        "print('selecting entries at positions 3, 4, and 5:   ', x[2:5])\n",
+        "\n",
+        "# Checking for membership of some element:\n",
+        "print('        checking whether 5 is in the tuple:   ', 5 in x)\n",
+        "print('        checking whether 1 is in the tuple:   ', 1 in x)\n",
+        "\n",
+        "# Checking how many entries are in the list:\n",
+        "print('                 the length of the tuple x:   ', len(x))"
+      ],
+      "metadata": {
+        "id": "1BfJ_BYETDDq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Sets"
+      ],
+      "metadata": {
+        "id": "eveo5wfCfQis"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sets are also just like lists, except for three key differences:\n",
+        "- They are specified using braces `{}` instead of brackets.\n",
+        "- They are unordered - inserting elements in some order does not guarantee they will be found at the corresponding index.\n",
+        "- They do not allow duplicates - an element either is or is not in the set; it cannot be added multiple times."
+      ],
+      "metadata": {
+        "id": "5sTnP1bP09t9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = {9, 8, 7, 6, 5}\n",
+        "print('                            original set:   ', x)\n",
+        "\n",
+        "# Checking for membership of some element:\n",
+        "print('        checking whether 5 is in the set:   ', 5 in x)\n",
+        "print('        checking whether 1 is in the set:   ', 1 in x)\n",
+        "\n",
+        "# Printing the elements contained in x:\n",
+        "print('        iterating over the contents of x:   ', end=' ')\n",
+        "for element in x:\n",
+        "    print(element, end=' ') # We also indent the code \"inside\" a for loop.\n",
+        "print()\n",
+        "\n",
+        "# Comparing two sets that look different but aren't!\n",
+        "print('     x is the same as {9, 9, 8, 7, 6, 5}:   ', x == {9, 9, 8, 7, 6, 5})\n",
+        "\n",
+        "# Checking how many entries are in the set:\n",
+        "print('                 the length of the set x:   ', len(x))\n",
+        "\n",
+        "# Joining two sets together:\n",
+        "print('       union of {1, 2, 3} with {4, 5, 6}:   ', {1, 2, 3}.union({4, 5, 6}))"
+      ],
+      "metadata": {
+        "id": "24dGtap3VCcK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The construction we just used above is called a `for` loop.\n",
+        "\n",
+        "A `for` loop is generally used when we know there are a certain number of executions of a piece of code we would like to repeat.\n",
+        "\n",
+        "Rather than rewrite the same piece of code $n$ times with slight variations each time, we can write a single `for` loop that encodes all the same instructions!\n",
+        "\n",
+        "The above `for` loop will assign the variable `element` to take every possible value contained in the data structure `x`, one after the other.\n",
+        "\n",
+        "The code inside the `for` loop (clearly \"inside\" because it's indented) will be repeated for each of those assignments of `element`.\n",
+        "\n",
+        "Therefore, the loop prints the value of each item in our set `x`, one after the other."
+      ],
+      "metadata": {
+        "id": "07ZVCdOp5fRD"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dictionaries"
+      ],
+      "metadata": {
+        "id": "6eXa__C8fN20"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A dictionary (`dict`) is kind of a set and kind of a list.\n",
+        "\n",
+        "A dictionary can be thought of as a set of keys (no duplicate keys allowed, and unoredered).\n",
+        "\n",
+        "Every key in our dictionary can be associated with some piece of data, called a value. Keys are generally integers, strings, or some other very simple data type. Values can be anything you want.\n",
+        "\n",
+        "We can index/iterate over a dictionary using the keys. A `for` loop iterating over a dictionary will assign the loop variable (in the example below, the loop variable is called `key`) with the value of each key from the dictionary's keys."
+      ],
+      "metadata": {
+        "id": "ruxbnUHu6HUz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = {\n",
+        "    'a': [1, 2, 3],\n",
+        "    'b': (4, 5, 6),\n",
+        "    'c': {7, 8, 9}\n",
+        "}\n",
+        "\n",
+        "print(\"         x['a'] contains:   \", x['a']) # Indexing with the string 'a' gives the list  [1, 2, 3].\n",
+        "print(\"         x['b'] contains:   \", x['b']) # Indexing with the string 'b' gives the tuple (4, 5, 6).\n",
+        "print(\"         x['c'] contains:   \", x['c']) # Indexing with the string 'c' gives the set   {7, 8, 9}.\n",
+        "\n",
+        "# Assigning a value to a key in a dictionary:\n",
+        "x['d'] = 5\n",
+        "print(\"x['d'] created, contains:   \", x['d'])\n",
+        "\n",
+        "# Overwriting a value in a dictionary:\n",
+        "x['a'] = [11, 12, 13]\n",
+        "print(\"x['a'] updated, contains:   \", x['a'])\n",
+        "\n",
+        "# Iterating over a dictionary:\n",
+        "for key in x:\n",
+        "    print()\n",
+        "    print('                     key:   ', key)\n",
+        "    print('                   value:   ', x[key])\n",
+        "print()\n",
+        "\n",
+        "# Checking how many entries are in the dict:\n",
+        "print('the length of the dict x:   ', len(x))"
+      ],
+      "metadata": {
+        "id": "ceWqXtKF42-r"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Exercises Part I\n",
+        "\n",
+        "Let's practice what we learned with some exercises."
+      ],
+      "metadata": {
+        "id": "SinDChD1VmOx"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Define a variable called `hello` and assign it the string value \"world\"."
+      ],
+      "metadata": {
+        "id": "iGAcf2-pW00U"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "11e-jaE_VtFe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Print the type and the value of the expression `7 % 3 == 1`."
+      ],
+      "metadata": {
+        "id": "27izaJg7XDq-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "0RByjVbfXU1n"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Assign a variable named `condition` any boolean expression you like (something that evaluates to `True` or `False`). Write a program that prints `1` if `condition` evaluates to `True` and prints `0` if condition evaluates to `False`."
+      ],
+      "metadata": {
+        "id": "sq1CGY8uXWmo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "c7dedoCpXys-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Create an empty list called `z`. Use a `for` loop to append the integers 1 through 8 inclusive. Check that the length of the list is 8 when you finish.\n",
+        "\n",
+        "HINT: The expression `range(x, y)` gives a data structure containing the integers $x$ through $y-1$, inclusive."
+      ],
+      "metadata": {
+        "id": "IereTavyX0aW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "jANNB89kZFIa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Define a variable `name` and assign it your first name (as a string) as its value. Define a dictionary called `char_to_index`.\n",
+        "\n",
+        "Iterate over the characters in `name` and add key-value pairs to the `char_to_index` dictionary such that each character in your name is mapped to the index of that character in your name.\n",
+        "\n",
+        "Example: My name is `\"Dan\"`, so my dictionary would look like the following when my code finishes running:\n",
+        "\n",
+        "```python\n",
+        "char_to_index = {\n",
+        "    \"D\": 0, # \"D\" is the first  character in \"Dan\" (index 0)\n",
+        "    \"a\": 1, # \"a\" is the second character in \"Dan\" (index 1)\n",
+        "    \"n\": 2  # \"n\" is the third  character in \"Dan\" (index 2)\n",
+        "}\n",
+        "```\n",
+        "\n",
+        "Extra challenge: handle duplicates by letting each value be a list of integers rather than just one integer."
+      ],
+      "metadata": {
+        "id": "AbxvgxcAZJpX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "rtS098rFb0YN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Functions\n",
+        "\n",
+        "Functions are the most important and useful construction in Python. They allow you to define custom behaviors, and are highly re-usable. Write them once and use them as many times as you need to!"
+      ],
+      "metadata": {
+        "id": "RsTG98umceKl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def average(numbers): # Define the function \"average\". It expects an argument called \"numbers\".\n",
+        "    total = 0 # Start a sum off at 0.\n",
+        "    for number in numbers: # Iterate over the given numbers.\n",
+        "        total = total + number # Add number to the total (update the value of total).\n",
+        "    avg = total / len(numbers) # Divide the total by the number of elements.\n",
+        "    return avg # That's the average. Send that information back.\n",
+        "\n",
+        "# Calling the average() function replaces the call with the value it returns.\n",
+        "print(average([2, 4])) # average([2, 4]) is a \"call\" to the average() function.\n",
+        "print(average([1, 2, 8, 9])) # Another call to the average function with different numbers."
+      ],
+      "metadata": {
+        "id": "N35_ubHycqi4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Importing libraries"
+      ],
+      "metadata": {
+        "id": "Migy7pgJfj5e"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Pandas"
+      ],
+      "metadata": {
+        "id": "L9jhMNygpI7j"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`pandas`](https://pandas.pydata.org/) is a library that lets you define and use DataFrames, much like in R."
+      ],
+      "metadata": {
+        "id": "eD81Z0uppOP9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install pandas"
+      ],
+      "metadata": {
+        "id": "KVOUyG5-njY9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the pandas library, refer to it as \"pd\".\n",
+        "import pandas as pd\n",
+        "\n",
+        "df = pd.read_csv( # Gives a DataFrame much like R.\n",
+        "    'sample_data/california_housing_test.csv', # File is in the sample_data folder.\n",
+        "    sep=',' # Entries are comma-separated.\n",
+        ")\n",
+        "print(df.head(5)) # Show first 5 rows of the df."
+      ],
+      "metadata": {
+        "id": "3suyxpKweGVl"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### SciPy"
+      ],
+      "metadata": {
+        "id": "pN0MG-tjpKli"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`scipy`](https://scipy.org/) is a library with a lot of statistical functions and other scientific tools."
+      ],
+      "metadata": {
+        "id": "VJPDhDJVpL8C"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the pearsonr() function from the scipy.stats library.\n",
+        "from scipy.stats import pearsonr\n",
+        "\n",
+        "print( # Pearson rank correlation on two lists.\n",
+        "    pearsonr([1, 4, 3, 2, 5], [2, 1, 3, 4, 5])\n",
+        ")\n",
+        "\n",
+        "print( # Pearson rank correlation on two columns from our df.\n",
+        "    pearsonr(df['median_income'], df['median_house_value'])\n",
+        ")"
+      ],
+      "metadata": {
+        "id": "G8UM-C1ihK36"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### StatsModels"
+      ],
+      "metadata": {
+        "id": "DMdtlDH4pQqE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`statsmodels`](https://www.statsmodels.org/stable/index.html) is a library with various statistical modeling functionalities (regressions of all kinds, among other things)."
+      ],
+      "metadata": {
+        "id": "fHxGddZmpSqd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the api submodule of statsmodels, call it \"sm\".\n",
+        "import statsmodels.api as sm\n",
+        "\n",
+        "model = sm.OLS( # Fit an ordinary least-squares linear regression.\n",
+        "    df['median_house_value'], # Predict the house value column,\n",
+        "    df.drop(columns=['median_house_value']) # using all the other columns.\n",
+        ")\n",
+        "result = model.fit()\n",
+        "print(result.summary())"
+      ],
+      "metadata": {
+        "id": "H_VsaNwKiKtM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Transformers"
+      ],
+      "metadata": {
+        "id": "vF_a5rPBpVf-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`transformers`](https://huggingface.co/docs/transformers/index) is a HuggingFace library that provides access to a huge number of open-source AI models that can do things like speaker diarization (segmenting audio into pieces depending on who is talking) and automatic speech recognition (speech-to-text transcription). Many of these models run on your device and preserve your data privacy.\n",
+        "\n",
+        "You can try running Whisper on an audio file I provide [here](https://drive.google.com/drive/folders/1MXx6Upnl2LMGsF_VKD5UGY-vy80TIZpq?usp=sharing)."
+      ],
+      "metadata": {
+        "id": "wrmLi2MpqBDu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the pipeline() function from the transformers library.\n",
+        "from transformers import pipeline\n",
+        "\n",
+        "pipe = pipeline( # Get a pipeline and assign it to the \"pipe\" variable.\n",
+        "    \"automatic-speech-recognition\", # Task is speech-to-text.\n",
+        "    model=\"openai/whisper-large-v3-turbo\" # Use this model, Whisper Turbo.\n",
+        ")\n",
+        "\n",
+        "print(pipe('audio.wav')) # Result of processing this audio file with Whisper Turbo."
+      ],
+      "metadata": {
+        "id": "itjBn7PqfIh_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### MatPlotLib"
+      ],
+      "metadata": {
+        "id": "oGeOLxPzpY9j"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`matplotlib`](https://matplotlib.org/) is a library that serves as the basis for many data visualization (plotting) libraries, and it has many basic functionalities of its own."
+      ],
+      "metadata": {
+        "id": "3hJwmbu5qDIQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import the pyplot module and call it \"plt\".\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "plt.scatter( # Scatter plot.\n",
+        "    df['median_income'], # x-values.\n",
+        "    df['median_house_value'], # y-values.\n",
+        "    s=2 # Make dots small, size 2.\n",
+        ")\n",
+        "plt.title('Median house value vs. median income') # Add a title.\n",
+        "plt.xlabel('Median income (scaled)') # Add an x-axis label.\n",
+        "plt.ylabel('Median house value') # Add a y-axis label.\n",
+        "plt.show() # Display the plot."
+      ],
+      "metadata": {
+        "id": "u7opvNnnqVAW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Plotly"
+      ],
+      "metadata": {
+        "id": "ZHHoy6ytqLfq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[`plotly`](https://plotly.com/python/) is a more advanced data visualization library that produces interactive visualizations."
+      ],
+      "metadata": {
+        "id": "-1x5GttqpcVh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Import graph_objects module, call it \"go\".\n",
+        "import plotly.graph_objects as go\n",
+        "\n",
+        "# Copied an example from the internet and changed it a bit.\n",
+        "fig = go.Figure(data=go.Scattergeo(\n",
+        "        locationmode = 'USA-states',\n",
+        "        lon = df['longitude'],\n",
+        "        lat = df['latitude'],\n",
+        "        hovertext = df['median_house_value'],\n",
+        "        mode = 'markers',\n",
+        "        marker = dict(\n",
+        "            size = 8,\n",
+        "            opacity = 0.8,\n",
+        "            reversescale = True,\n",
+        "            autocolorscale = False,\n",
+        "            symbol = 'square',\n",
+        "            line = dict(\n",
+        "                width=1,\n",
+        "                color='rgba(102, 102, 102)'\n",
+        "            ),\n",
+        "            colorscale = 'Viridis',\n",
+        "            color = df['median_house_value'],\n",
+        "            cmin = df['median_house_value'].min(),\n",
+        "            cmax = df['median_house_value'].max(),\n",
+        "            colorbar=dict(\n",
+        "                title=dict(\n",
+        "                    text=\"Median house value\"\n",
+        "                )\n",
+        "            )\n",
+        "        )))\n",
+        "\n",
+        "fig.update_layout(\n",
+        "        title = 'California cities by median house value',\n",
+        "        geo = dict(\n",
+        "            scope='usa',\n",
+        "            projection_type='albers usa',\n",
+        "            showland = True,\n",
+        "            landcolor = \"rgb(250, 250, 250)\",\n",
+        "            subunitcolor = \"rgb(217, 217, 217)\",\n",
+        "            countrycolor = \"rgb(217, 217, 217)\",\n",
+        "            countrywidth = 0.5,\n",
+        "            subunitwidth = 0.5\n",
+        "        ),\n",
+        "    )\n",
+        "fig.show()"
+      ],
+      "metadata": {
+        "id": "P_qPSpHkoQ5T"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Exercises Part II"
+      ],
+      "metadata": {
+        "id": "fD3jeQfcferT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Write a function `sum_even` which takes a list of numbers called `numbers` and computes the sum of all the numbers in that list which are even.\n",
+        "\n",
+        "HINT: You can check if a number `x` is even with the expression `x % 2 == 0`."
+      ],
+      "metadata": {
+        "id": "7FgvFVVHfhcO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "TTZJ9Xseff4b"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Write a function `concatenate` which takes a list of strings called `strings` and joins them together, end-to-end.\n",
+        "\n",
+        "HINT: The `+` operator can be used on strings in a very intuitive way."
+      ],
+      "metadata": {
+        "id": "Ty9FijdQoMUq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "XUUi_Vz9oQkt"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Head to the documentation for [`pd.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Choose any three of the Methods available to a Pandas DataFrame, execute them, and describe what they do."
+      ],
+      "metadata": {
+        "id": "PognQoeAoRdB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "pI6qwMt5oR8U"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Head to the documentation for [`scipy.stats.shapiro`](https://docs.scipy.org/doc/scipy/tutorial/stats/hypothesis_shapiro.html) and run a Shapiro-Wilk test on each of the columns in our `df`.\n",
+        "\n",
+        "HINT: you can iterate over `df.columns`."
+      ],
+      "metadata": {
+        "id": "Oz-cXmkIoUUe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "OrUqB127oVKp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Head to the documentation for [`statsmodels.formula.api.smf.mixedlm`](https://www.statsmodels.org/stable/mixed_linear.html). Use formula notation to model `median_house_value` as a funtion of `median_income`, grouping by `'housing_median_age'`.\n",
+        "\n",
+        "NOTE: The example they give in the documentation is almost exactly what you want, but note that our `data` is stored in `df` already - we don't need lines 1 or 3 in their example."
+      ],
+      "metadata": {
+        "id": "h_WqG1XvoXCL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# YOUR CODE HERE:\n"
+      ],
+      "metadata": {
+        "id": "Bpo03geboZZB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## [IF TIME] Classes"
+      ],
+      "metadata": {
+        "id": "L9zWRb3af1wl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Classes are one of the trickiest concepts to deal with when learning to program.\n",
+        "\n",
+        "The right way to think of a `class` is as a \"blueprint\" or a \"template.\"\n",
+        "\n",
+        "We can define a `class` to represent any kind of data we want - these are basically custom data types.\n",
+        "\n",
+        "In Python, there is a `class` called `int` which basically implements all the functionality that integers have in Python. Similarly, there are `bool`, `str`, and `float` classes as well.\n",
+        "\n",
+        "We won't get into all the details of how this code works, but it is useful to see, and will help us to understand the later syntax we will see using the dot `.` notation."
+      ],
+      "metadata": {
+        "id": "YLQT4EDPdjdU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Car:\n",
+        "\n",
+        "    # When we call the Car() class, this function is executed.\n",
+        "    def __init__(\n",
+        "        self,\n",
+        "        color: str, # Expects a str for \"color\".\n",
+        "        make: str, # Expects a str for \"make\".\n",
+        "        model: str, # Expects a str for \"model\".\n",
+        "        x: float, # Expects a number for \"x\".\n",
+        "        y: float # Expects a number for \"y\".\n",
+        "    ):\n",
+        "\n",
+        "        self.color = color # Store this car's color long-term.\n",
+        "        self.make = make   # Store this car's make long-term.\n",
+        "        self.model = model # Store this car's model long-term.\n",
+        "        self.x = x         # Store this car's x-coordinate long-term.\n",
+        "        self.y = y         # Store this car's y-coordinate long-term.\n",
+        "\n",
+        "        # Print a message after creating this car.\n",
+        "        print(f'Placed a {self.color} {self.make} {self.model} at: ({self.x}, {self.y}).')\n",
+        "\n",
+        "    # When we call .drive(...) on the car, this function is executed.\n",
+        "    def drive(\n",
+        "        self,\n",
+        "        x_change: float, # Expects a float for x_change.\n",
+        "        y_change: float  # Expects a float for y_change.\n",
+        "    ):\n",
+        "        self.x += x_change # Add x_change to this car's x-coord.\n",
+        "        self.y += y_change # Add y_change to this car's y-coord.\n",
+        "\n",
+        "        # Print a message whenever we move this car.\n",
+        "        print(f'Drove the {self.color} {self.make} {self.model} car to: ({self.x}, {self.y}).')\n"
+      ],
+      "metadata": {
+        "id": "lfsoP-YWgfpx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "car1 = Car('red', 'Porsche', '911', 1, 7) # Create a car and refer to it as \"car1\".\n",
+        "car2 = Car('black', 'Buick', 'GNX', 4, 2) # Create another car and refer to it as \"car2\"."
+      ],
+      "metadata": {
+        "id": "VcysHnHuj5Es"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "car1.drive(-3, 5) # Drive 3 to the left, 5 up.\n",
+        "car2.drive(4, 7) # Drive 4 to the right, 7 up."
+      ],
+      "metadata": {
+        "id": "wI0f59DYkk8u"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Dot notation allows us to access info about car2.\n",
+        "print('What color is car2?', car2.color)\n",
+        "\n",
+        "# Similar dot notation allows us to access similar info about car1.\n",
+        "print('What color is car1?', car1.color)"
+      ],
+      "metadata": {
+        "id": "pdazcZVMk7ZT"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
