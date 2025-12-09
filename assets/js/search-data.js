@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-principal-component-analysis-of-bert-39-s-static-embeddings",
+        },{id: "post-a-brief-introduction-to-python",
+        
+          title: "A brief introduction to Python.",
+        
+        description: "A brief introduction to the Python programming language. This notebook is adapted from I gave to some fellow grad students in Georgetown&#39;s linguistics department.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/python-intro/";
+          
+        },
+      },{id: "post-principal-component-analysis-of-bert-39-s-static-embeddings",
         
           title: "Principal component analysis of BERT&#39;s static embeddings",
         
