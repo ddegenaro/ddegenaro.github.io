@@ -197,6 +197,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/whisper_ui/";
             },},{
+        id: 'social-arxiv',
+        title: 'arXiv',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://arxiv.org/a/degenaro_d_1.html", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
