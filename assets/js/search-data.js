@@ -181,11 +181,25 @@ ninja.data = [{
           section: "News",},{id: "news-officially-began-my-phd-in-georgetown-s-department-of-computer-science",
           title: 'Officially began my PhD in Georgetown’s Department of Computer Science!',
           description: "",
+          section: "News",},{id: "news-re-hired-for-jhu-s-scale-2026-program",
+          title: 'Re-hired for JHU’s SCALE 2026 program!',
+          description: "",
+          section: "News",},{id: "news-elected-treasurer-of-my-union-gage-a-chapter-of-aft",
+          title: 'Elected treasurer of my union, GAGE, a chapter of AFT!',
+          description: "",
+          section: "News",},{id: "news-written-with-colleagues-in-georgetown-s-math-department-and-at-other-institutions-fast-reconstruction-of-exact-maxwell-dynamics-from-sparse-data-was-accepted-to-neurips-2026-as-a-spotlight-paper",
+          title: 'Written with colleagues in Georgetown’s math department and at other institutions, “Fast Reconstruction...',
+          description: "",
           section: "News",},{id: "projects-entropy-and-learnability",
           title: 'Entropy and learnability',
           description: "How does the entropy of a distribution relate to a language model&#39;s ability to learn from that distribution?",
           section: "Projects",handler: () => {
               window.location.href = "/projects/entropy_learnability/";
+            },},{id: "projects-flash-max",
+          title: 'FLASH-MAX',
+          description: "A quick overview of the FLASH-MAX project, accepted as a Spotlight Poster at NeurIPS 2026.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flash_max/";
             },},{id: "projects-tex-table",
           title: 'TeX Table',
           description: "This is a simple Python class that converts array-like objects such as Pandas DataFrames and Series, NumPy arrays, PyTorch tensors, and Python lists to LaTeX table representations.",
