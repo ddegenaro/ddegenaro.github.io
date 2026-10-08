@@ -6,5 +6,5 @@ repo_description_lines_max: 2
 github_repos:
   - ddegenaro/tex-table
   - ddegenaro/nllb-finetune
-  - ddegenaro/entropy-learnability
+  - ddegenaro/flash-max
   - ddegenaro/whisper-ui

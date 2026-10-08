@@ -9,6 +9,7 @@ nav_order: 6
 
 ## Courses Taught
 
+- Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2026)
 - Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2025)
 - Machine Learning ([MIT MITES Semester Program](https://mites.mit.edu/) 2024)
 
@@ -16,7 +17,9 @@ nav_order: 6
 
 ### Georgetown University
 
-- COSC-3470 | Deep Learning, taught by [Sarah Bargal](https://bargal.georgetown.domains/) (Fall 2025 - **in progress**)
+- COSC 1015 | Science of AI, taught by [Sarah Bargal](https://bargal.georgetown.domains/) (Fall 2026)
+- COSC 5510 | Databases, taught by Ophir Frieder (Spring 2026)
+- COSC-3470 | Deep Learning, taught by Sarah Bargal (Fall 2025)
 - COSC-3470 | Deep Learning, taught by Sarah Bargal (Spring 2025)
 - COSC-5455 | Deep Learning, taught by Sarah Bargal (Fall 2024)
 - COSC-5470 | Deep Learning for Computer Vision, taught by Sarah Bargal (Spring 2024)
@@ -33,15 +36,20 @@ nav_order: 6
 
 ### Student Projects Advised
 
-- Keven Amaya-Muñoz, Arko Barua, and Luan Hoang, to appear at Massachusetts Institute of Technology Undergraduate Research Conference (URTC), 2025.
-- Melissa Alfaro-Zeledon and Rida Karim, Identifying Key Factors for Femicide Prevention and Policy Development: Leveraging Supervised Machine Learning with Temporal and Geospatial Analysis. Lightning Talk at URTC, 2024.
-- Hubert Hsu and Bethany Ray, MT-MOE: Protein-Specific Drug Design Utilizing Mixture of Experts Transformers. Poster at URTC, 2024
+- Zehra Demirtoka and Vivi Li, Address-Level Seismic Risk Assessment from Street-View Imagery. Paper at MIT URTC, 2026.
+- Ali Sahi, Abdelwahab Rahama, Micah Lynn, and Nathan Ankrah, Mechanistic Multiplicity: Implications for Circuit-level Interpretability and Intervention Effectiveness. Paper at MIT URTC, 2026.
+- Ann Sali Feutcha and Megan Jeong, Court v. Chat: A Mixed-Methods Evaluation of
+Legal NLP Systems. Poster at MIT URTC, 2026.
+- Keven Amaya-Muñoz, Arko Barua, and Luan Hoang, Comparative Evaluation of Domain Adaptation in Vision Models for Brain Tumor Classification With Explainability. Poster at MIT URTC, 2025.
+- Melissa Alfaro-Zeledon and Rida Karim, Identifying Key Factors for Femicide Prevention and Policy Development: Leveraging Supervised Machine Learning with Temporal and Geospatial Analysis. Lightning Talk at MIT URTC, 2024.
+- Hubert Hsu and Bethany Ray, MT-MOE: Protein-Specific Drug Design Utilizing Mixture of Experts Transformers. Poster at MIT URTC, 2024.
 
 ### Brief introduction to Google Colab and PyTorch for building convolutional neural networks
 
 The basis of some guest lecturing I've done in Sarah Bargal's classes mentioned above.
 
-- [Getting started]({% post_url 2024-09-18-getting-started-pytorch %})
+- [Python intro]({% post_url 2025-11-15-python-intro %})
+- [Getting started with PyTorch]({% post_url 2024-09-18-getting-started-pytorch %})
 - [Training a CNN]({% post_url 2024-09-18-mnist-cnn %})
 
 ### Lecture given at Walter Payton Prep High School in Chicago, IL via Zoom

@@ -2,7 +2,14 @@
   url: "https://naacl.org"
   color: "#f71d25"
 
+"ACL":
+  url: "https://aclweb.org"
+  color: "#f71d25"
+
 "SIGIR":
   url: "https://sigir.org"
   color: "#6ba5d0"
 
+"NeurIPS":
+  url: "https://neurips.cc"
+  color: "#00cc66"

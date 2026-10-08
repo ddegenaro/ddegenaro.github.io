@@ -32,3 +32,5 @@ I'm a PhD student at Georgetown University, where I work with [Dr. Sarah Bargal]
 I am interested in the development of safe, ethical, and energy-efficient multimodal intelligent systems that serve the needs of everyday people while respecting important rights such as privacy, copyright, and the right to be forgotten.
 
 I am also interested in low-resource machine translation and speech recognition, multilingual NLP, and information-theoretic approaches to language modeling and linguistics.
+
+My Erdős number is 4.
